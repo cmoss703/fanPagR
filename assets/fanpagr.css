@@ -1,1 +1,43 @@
 /* CSS will go here */
+
+header.romance  {
+    background-color: #ad1457;
+    color: white;
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+
+}
+
+div.romance  {
+    background-color: #f8bbd0;
+    color: black;
+}
+
+nav.romance  {
+    background-color: #ad1457;
+}
+
+body.romance  {
+    background-color: #fce4ec;
+    background-image: url(images/romanceBG.jpg);
+}
+
+body.sciFi  {
+    background-color: #efebe9;
+    background-image: url(images/sciFiBG.jpg);
+}
+
+div.sciFi  {
+    background-color: #a1887f;
+}
+
+header.sciFi  {
+    background-color: #4e342e;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}
+
+nav.sciFi {
+    background-color: #4e342e;
+}
