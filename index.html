@@ -47,12 +47,12 @@
         </div>
     </nav>
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Saved Titles</a></li>
+        <li><a href="#">Themes</a></li>
     </ul>
 
-    <div id="landing-page">
+    <div id="landing-page" style="display: block;">
         <h1>fanPagR</h1>
         <form id="media-form">
             <label for="media-input">Search for your favorite movie or TV show!</label>
@@ -61,22 +61,29 @@
             <input id="add-media" type="submit" value="Search!">
         </form>
     </div>
-    <div id="searched">
-        <header></header>
 
+    <div id="searched" style="display: block;">
+        <div class="container">
+            <div class="row">
+                <header class="center media-title">Title Placeholder</header>
+            </div>
+            <div class="row main-grid">
+                <div class="col s9 media-stuff">
+                    <section class="row synopsis">Plot:</section>
+                    <section class="row media-actors">Actors:</section>
+                    <section class="row related">Related Content</section>
+                </div>
+                <aside class="col s3" id="sidebar">sidebar</aside>
+            </div>
+
+        </div>
+    </div>
     </div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./assets/script.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
 
-            $(".dropdown-trigger").dropdown();
-
-        });
-
-    </script>
 </body>
 
 </html>
