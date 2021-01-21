@@ -1,5 +1,6 @@
 /* CSS will go here */
-/* CSS will go here */
+
+/* romance theme */
 
 header.romance  {
     background-color: #ad1457;
@@ -9,7 +10,7 @@ header.romance  {
 
 }
 
-div.romance  {
+section.romance  {
     background-color: #f8bbd0;
     color: black;
 }
@@ -23,12 +24,15 @@ body.romance  {
     background-image: url(images/romanceBG.jpg);
 }
 
+
+/* Sci Fi theme */
+
 body.sciFi  {
     background-color: #efebe9;
     background-image: url(images/sciFiBG.jpg);
 }
 
-div.sciFi  {
+section.sciFi  {
     background-color: #a1887f;
 }
 
@@ -41,4 +45,29 @@ header.sciFi  {
 
 nav.sciFi {
     background-color: #4e342e;
+}
+
+/* Noir Theme */
+
+
+header.noir  {
+    background-color: #212121;
+    color: white;
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+
+}
+
+section.noir  {
+    background-color: #9e9e9e;
+    color: black;
+}
+
+nav.noir  {
+    background-color: #212121;
+}
+
+body.noir  {
+    background-color:#e0e0e0;
+    background-image: url(images/noirBG.jpg);
 }
