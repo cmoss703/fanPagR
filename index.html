@@ -1,11 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap" rel="stylesheet">
+    <!-- font-family: 'Proza Libre', sans-serif; -->
+    <link href='https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fanpagr.css" />
+    <title>fanPagR</title>
 </head>
+
 <body>
-    
+    <!-- <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo center">fanPagR</a>
+            <ul class="left hide-on-med-and-down">
+                <li><a href="sass.html">Page Themes</a></li>
+                <li><a href="badges.html">Saved Titles</a></li>
+                <li class="active"><a href="collapsible.html">Home</a></li>
+            </ul>
+        </div>
+    </nav> -->
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">Sci-Fi</a></li>
+        <li><a href="#!">Kids</a></li>
+        <!-- <li class="divider"></li> -->
+        <li><a href="#!">Noir</a></li>
+    </ul>
+    <nav>
+        <div class="nav-wrapper">
+
+            <a href="#!" class="brand-logo">fanPagR</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">Home</a></li>
+                <li id="saved-titles"><a href="#">Saved Titles</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-trigger themes" href="#!" data-target="dropdown1">Themes<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+        </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+    </ul>
+
+    <div id="landing-page">
+        <h1>fanPagR</h1>
+        <form id="media-form">
+            <label for="media-input">Search for your favorite movie or TV show!</label>
+            <input type="text" id="media-input">
+            <br>
+            <input id="add-media" type="submit" value="Search!">
+        </form>
+    </div>
+    <div id="searched">
+        <header></header>
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/script.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $(".dropdown-trigger").dropdown();
+
+        });
+
+    </script>
 </body>
+
 </html>
