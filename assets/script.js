@@ -10,7 +10,7 @@ $(document).ready( function () {
 
     $("#add-media").on("click", function () {
 
-        var title = $("#media-input").trim().split(" ").join("+");
+        var title = $("#media-input").val().trim().split(" ").join("+");
         
         
         // // Materialize functionality for dropdowns
