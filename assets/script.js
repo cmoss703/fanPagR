@@ -21,7 +21,17 @@ $.ajax ({
 })
     .done( function(response) {
         console.log("OMDB", response);
-        console.log("------------------------")
+        console.log("------------------------");
+
+        var imagePoster = $("<img>").attr("src", response.Poster)
+            genre = response.Genre
+            actors = response.Actors;
+
+        console.log(actors);
+
+        $("#sidebar").html(imagePoster);
+        $(".media-title").text(response.Title + " (" + response.Year + ")");
+        $(".synopsis").text(response.Plot);
     });
 // GIPHY
 $.ajax ({
@@ -34,14 +44,14 @@ $.ajax ({
     });
 // TasteDive
 
-$.ajax ({
-    url: "https://tastedive.com/api/similar?q=" + title+ "&info=1&limit=4&k=400006-fanPagr-OP0T5H8C",
-    method: "GET"
-})
-    .done( function(response) {
-        console.log("TasteDive", response);
-        console.log("------------------------")
-    })
+// $.ajax ({
+//     url: "https://tastedive.com/api/similar?q=" + title+ "&info=1&limit=4&k=400006-fanPagr-OP0T5H8C",
+//     method: "GET"
+// })
+//     .done( function(response) {
+//         console.log("TasteDive", response);
+//         console.log("------------------------")
+//     })
 
 // Function for when button is clicked:
 
