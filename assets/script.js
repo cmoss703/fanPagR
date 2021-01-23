@@ -5,14 +5,6 @@
 
 
 $(document).ready( function () {
-var userInput = prompt("Enter a movie or TV show to search");
-var title = userInput.trim().split(" ").join("+");
-// Materialize method to auto-init all JavaScript functionality
-M.AutoInit();
-// // Materialize functionality for dropdowns
-// $(".dropdown-trigger").dropdown();
-// // To move the navbar to the side on mobile:  
-// $('.sidenav').sidenav();
 
 // OMDB
 $.ajax ({
