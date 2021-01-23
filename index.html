@@ -9,9 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap" rel="stylesheet">
     <!-- font-family: 'Proza Libre', sans-serif; -->
+    <!-- romance header font-->
     <link href='https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap' rel='stylesheet'>
+   
+   <!--sciFi header font-->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" id="csstheme" href="./assets/default.css" />
+    
+    <!-- horror header font -->
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" id="csstheme" href="./assets/noir.css" />
     <title>fanPagR</title>
 </head>
 
@@ -28,11 +34,17 @@
     </nav> -->
     <!-- Dropdown Structure -->
     <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!" id="sciFi">Sci-Fi</a></li>
-        <li><a href="#!" id="romance">Romance</a></li>
+        <li><a href="#!" id="sciFi" class="cssClass">Sci-Fi</a></li>
+        <li><a href="#!" id="romance" class="cssClass">Romance</a></li>
         <!-- <li class="divider"></li> -->
-        <li><a href="#!" id="noir">Noir</a></li>
-        <li><a href="#!" id="default">Default</a></li>
+        <li><a href="#!" id="noir" class="cssClass">Noir</a></li>
+        <li><a href="#!" id="default" class="cssClass">Default</a></li>
+        <li><a href="#!" id="action" class="cssClass">Action</a></li>
+        <li><a href="#!" id="horror" class="cssClass">Horror</a></li>
+        <li><a href="#!" id="kids" class="cssClass">Kids</a></li>
+        <li><a href="#!" id="comedy" class="cssClass">Comedy</a></li>
+
+
 
     </ul>
     <nav>
@@ -54,7 +66,7 @@
         <li><a href="#">Themes</a></li>
     </ul>
 
-    <div id="landing-page" style="display: block;">
+    <div id="landing-page" class="container" style="display: block;">
         <h1>fanPagR</h1>
         <form id="media-form">
             <label for="media-input">Search for your favorite movie or TV show!</label>
