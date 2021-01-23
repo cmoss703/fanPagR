@@ -8,8 +8,9 @@ $(document).ready( function () {
     // Materialize method to auto-init all JavaScript functionality
     M.AutoInit();
 
-    $("#add-media").on("click", function () {
-
+    $("#add-media").on("click", function (event) {
+        event.preventDefault();
+        
         var title = $("#media-input").val().trim().split(" ").join("+");
         
         
