@@ -11,7 +11,7 @@
     <!-- font-family: 'Proza Libre', sans-serif; -->
     <link href='https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/fanpagr.css" />
+    <link rel="stylesheet" id="csstheme" href="./assets/default.css" />
     <title>fanPagR</title>
 </head>
 
@@ -28,10 +28,12 @@
     </nav> -->
     <!-- Dropdown Structure -->
     <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!">Sci-Fi</a></li>
-        <li><a href="#!">Kids</a></li>
+        <li><a href="#!" id="sciFi">Sci-Fi</a></li>
+        <li><a href="#!" id="romance">Romance</a></li>
         <!-- <li class="divider"></li> -->
-        <li><a href="#!">Noir</a></li>
+        <li><a href="#!" id="noir">Noir</a></li>
+        <li><a href="#!" id="default">Default</a></li>
+
     </ul>
     <nav>
         <div class="nav-wrapper">
@@ -67,13 +69,13 @@
             <div class="row">
                 <header class="center media-title">Title Placeholder</header>
             </div>
-            <div class="row main-grid">
-                <div class="col s9 media-stuff">
+            <div class="row ">
+                <div class="col s8 media-stuff">
                     <section class="row synopsis">Plot:</section>
                     <section class="row media-actors">Actors:</section>
                     <section class="row related">Related Content</section>
                 </div>
-                <aside class="col s3" id="sidebar">sidebar</aside>
+                <aside class="col s3 offset-s1" >sidebar</aside>
             </div>
 
         </div>
