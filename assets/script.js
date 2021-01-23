@@ -12,7 +12,9 @@ $(document).ready( function () {
         event.preventDefault();
         
         var title = $("#media-input").val().trim().split(" ").join("+");
-        
+
+        // $("#landing-page").style.display = "none";
+        // $("#searched").style.display = "block";
         
         // // Materialize functionality for dropdowns
         // $(".dropdown-trigger").dropdown();
@@ -48,7 +50,6 @@ $(document).ready( function () {
             .done( function(response) {
                 console.log("GIPHY", response);
                 console.log("------------------------");
-                console.log(actors);
 
                 for (var i = 0; i < response.data.length; i++) {
 
@@ -74,20 +75,16 @@ $(document).ready( function () {
             })
     })
 
-    $(".cssclass").on("click", function (event) {
+    $(".cssClass").on("click", function (event) {
 
         event.preventDefault();
 
-        changeTheme();
+        var newTheme = $(this).attr("id")
 
-    };
+        $("#csstheme").attr("href", "./assets/" + newTheme + ".css")
+
+    });
     
-   function changeTheme() {
-
-    var newTheme = $(".cssclass").attr("id")
-
-    $("#csstheme").attr("href", "./assets/" + newTheme + ".css")
-   };
     
 
 })    
