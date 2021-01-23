@@ -1,8 +1,8 @@
-/* sci fi theme */
+/* kidstheme */
 
 body  {
-    background-color: #d7ccc8;
-    background-image: url("../images/sciFiBG.png");
+    /* background-color: #d7ccc8; */
+    background-image: url("../images/kidsBG.png");
     background-size: cover;
 
 }
@@ -10,16 +10,16 @@ body  {
 section,
 aside  
 {
-    background-color: #a1887f;
+    background-color: #9575cd;
     box-shadow: 5px 5px 8px black;
     padding: 20px;
 
 }
 
 header  {
-    background-color: #4e342e;
+    background-color: #4527a0;
     color: white;
-    font-family: 'Orbitron', sans-serif;
+    /* font-family: 'Orbitron', sans-serif; */
     font-size: 40px;
     text-align: center;
     padding: 20px;
@@ -28,7 +28,7 @@ header  {
 }
 
 nav {
-    background-color: #4e342e;
+    background-color: #ff5722  ;
     padding-left: 20px;
 
 }
