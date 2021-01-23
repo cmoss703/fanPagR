@@ -12,7 +12,7 @@ $(document).ready( function () {
         event.preventDefault();
         
         var title = $("#media-input").val().trim().split(" ").join("+");
-
+      
         // $("#landing-page").style.display = "none";
         // $("#searched").style.display = "block";
         
@@ -71,7 +71,18 @@ $(document).ready( function () {
         })
             .done( function(response) {
                 console.log("TasteDive", response);
-                console.log("------------------------")
+                console.log("------------------------");
+
+                var relatedContent = response.Similar.Results;
+                console.log(relatedContent);
+
+                for (i=0;i<relatedContent.length;i++) {
+                    var newRelated = $(`<div class="col s12 m6"><div class="card"><div class="card-content"><p>${relatedContent[i].Name}</p><p><a href="${relatedContent[i].wUrl}" target="_blank">Go to Wikipedia for more info</a></p><p>${relatedContent[i].wTeaser}</p></div></div></div>`);
+                    $(".related").append(newRelated)
+                };
+                
+                
+
             })
     })
 
