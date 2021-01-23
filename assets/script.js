@@ -73,13 +73,21 @@ $(document).ready( function () {
                 console.log("------------------------")
             })
     })
+
+    $(".cssclass").on("click", function (event) {
+
+        event.preventDefault();
+
+        changeTheme();
+
+    };
     
    function changeTheme() {
 
-    var newTheme = 
+    var newTheme = $(".cssclass").attr("id")
 
-    $("#csstheme").attr("href", newTheme)
-   }
+    $("#csstheme").attr("href", "./assets/" + newTheme + ".css")
+   };
     
 
 })    
