@@ -15,6 +15,9 @@ M.AutoInit();
 // $('.sidenav').sidenav();
 
 // OMDB
+
+var actors;
+
 $.ajax ({
     url: "http://www.omdbapi.com/?t=" + title + "&plot=full&apikey=1d96ca81",
     method: "GET",
@@ -24,8 +27,8 @@ $.ajax ({
         console.log("------------------------");
 
         var imagePoster = $("<img>").attr("src", response.Poster)
-            genre = response.Genre
-            actors = response.Actors;
+            genre = response.Genre;
+        actors = response.Actors;
 
         console.log(actors);
 
