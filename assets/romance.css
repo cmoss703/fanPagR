@@ -1,0 +1,31 @@
+/*romance theme */
+
+header  {
+    background-color: #ad1457;
+    color: white;
+    font-family: 'Great Vibes', cursive;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+
+}
+
+section,
+aside
+{
+    background-color: #f8bbd0;
+    color: black;
+    box-shadow: 5px 5px 8px black;
+    padding: 20px;
+    /* margin: 5px; */
+}
+
+nav {
+    background-color: #ad1457;
+}
+
+body  {
+    background-color: #fce4ec;
+    background-image: url("../images/romanceBG.jpg");
+    background-size: cover;
+}

@@ -1,0 +1,32 @@
+/* Noir Theme */
+
+
+header  {
+    background-color: #212121;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+}
+
+section,
+aside
+{
+    background-color: #9e9e9e;
+    color: black;
+    box-shadow: 5px 5px 8px black;
+    padding: 20px;
+    /* margin: 10px; */
+
+}
+
+nav {
+    background-color: #212121;
+}
+
+body  {
+    background-color:#e0e0e0;
+    background-image: url("../images/noirBG.jpg");
+    background-size: cover;
+}

@@ -1,0 +1,31 @@
+/* sci fi theme */
+
+body  {
+    background-color: #efebe9;
+    background-image: url("../images/sciFiBG.jpg");
+    background-size: cover;
+
+}
+
+section,
+aside  
+{
+    background-color: #a1887f;
+    box-shadow: 5px 5px 8px black;
+    /* opacity: .95; */
+    padding: 20px;
+
+}
+
+header  {
+    background-color: #4e342e;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #4e342e;
+}
