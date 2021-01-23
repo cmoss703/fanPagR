@@ -5,53 +5,65 @@
 
 
 $(document).ready( function () {
-    var userInput = prompt("Enter a movie or TV show to search");
-    var title = userInput.trim().split(" ").join("+");
     // Materialize method to auto-init all JavaScript functionality
     M.AutoInit();
-    // // Materialize functionality for dropdowns
-    // $(".dropdown-trigger").dropdown();
-    // // To move the navbar to the side on mobile:  
-    // $('.sidenav').sidenav();
+
+    $("#add-media").on("click", function () {
+
+        var title = $("#media-input").trim().split(" ").join("+");
+        
+        
+        // // Materialize functionality for dropdowns
+        // $(".dropdown-trigger").dropdown();
+        // // To move the navbar to the side on mobile:  
+        // $('.sidenav').sidenav();
+        
+        // OMDB
+        $.ajax ({
+            url: "http://www.omdbapi.com/?t=" + title + "&plot=full&apikey=1d96ca81",
+            method: "GET",
+            dataType: "jsonp"
+        })
+            .done( function(response) {
+                console.log("OMDB", response);
+                console.log("------------------------");
+        
+                var imagePoster = $("<img>").attr("src", response.Poster)
+                    genre = response.Genre
+                    actors = response.Actors;
+        
+                console.log(actors);
+        
+                $("#sidebar").html(imagePoster);
+                $(".media-title").text(response.Title + " (" + response.Year + ")");
+                $(".synopsis").text(response.Plot);
+            });
     
-    // OMDB
-    $.ajax ({
-        url: "http://www.omdbapi.com/?t=" + title + "&plot=full&apikey=1d96ca81",
-        method: "GET",
+        // GIPHY
+        $.ajax ({
+            url: "https://api.giphy.com/v1/gifs/search?api_key=PorPxXd5WaUPFvGd2oLlj4n8kI1EbG99&q=" + title + "&limit=5&offset=0&rating=g&lang=en",
+            method:"GET"
+        })
+            .done( function(response) {
+                console.log("GIPHY", response);
+                console.log("------------------------")
+            });
+    
+    
+        // TasteDive
+        
+        $.ajax ({
+            url: "https://tastedive.com/api/similar?q=" + title+ "&info=1&limit=4&k=400006-fanPagr-OP0T5H8C",
+            method: "GET",
+            dataType: "jsonp"
+        })
+            .done( function(response) {
+                console.log("TasteDive", response);
+                console.log("------------------------")
+            })
     })
-        .done( function(response) {
-            console.log("OMDB", response);
-            console.log("------------------------");
     
-            var imagePoster = $("<img>").attr("src", response.Poster)
-                genre = response.Genre
-                actors = response.Actors;
+   
     
-            console.log(actors);
-    
-            $("#sidebar").html(imagePoster);
-            $(".media-title").text(response.Title + " (" + response.Year + ")");
-            $(".synopsis").text(response.Plot);
-        });
-    // GIPHY
-    $.ajax ({
-        url: "https://api.giphy.com/v1/gifs/search?api_key=PorPxXd5WaUPFvGd2oLlj4n8kI1EbG99&q=" + title + "&limit=5&offset=0&rating=g&lang=en",
-        method:"GET"
-    })
-        .done( function(response) {
-            console.log("GIPHY", response);
-            console.log("------------------------")
-        });
-    // TasteDive
-    
-    // $.ajax ({
-    //     url: "https://tastedive.com/api/similar?q=" + title+ "&info=1&limit=4&k=400006-fanPagr-OP0T5H8C",
-    //     method: "GET"
-    // })
-    //     .done( function(response) {
-    //         console.log("TasteDive", response);
-    //         console.log("------------------------")
-    //     })
-    
-    // Function for when button is clicked:
+
 })    
