@@ -12,6 +12,14 @@ $(document).ready( function () {
         event.preventDefault();
         
         var title = $("#media-input").val().trim().split(" ").join("+");
+      
+        // $("#landing-page").style.display = "none";
+        // $("#searched").style.display = "block";
+        
+        // // Materialize functionality for dropdowns
+        // $(".dropdown-trigger").dropdown();
+        // // To move the navbar to the side on mobile:  
+        // $('.sidenav').sidenav();
         
         // OMDB
         $.ajax ({
@@ -23,13 +31,13 @@ $(document).ready( function () {
                 console.log("OMDB", response);
                 console.log("------------------------");
         
-                var imagePoster = $("<img>").attr("src", response.Poster)
+                var imagePoster = $("<img>").attr("src", response.Poster).addClass("responsive-img")
                     genre = response.Genre
                     actors = response.Actors;
         
                 console.log(actors);
         
-                $("#sidebar").html(imagePoster);
+                $("#sidebar").prepend(imagePoster);
                 $(".media-title").text(response.Title + " (" + response.Year + ")");
                 $(".synopsis").text(response.Plot);
             });
@@ -41,7 +49,16 @@ $(document).ready( function () {
         })
             .done( function(response) {
                 console.log("GIPHY", response);
-                console.log("------------------------")
+                console.log("------------------------");
+
+                for (var i = 0; i < response.data.length; i++) {
+
+                var gifURL = $("<img>").attr("src", response.data[i].images.fixed_height.url).addClass("responsive-img");
+
+                $("#sidebar").append(gifURL);
+
+                }
+
             });
     
     
@@ -68,8 +85,17 @@ $(document).ready( function () {
 
             })
     })
+
+    $(".cssClass").on("click", function (event) {
+
+        event.preventDefault();
+
+        var newTheme = $(this).attr("id")
+
+        $("#csstheme").attr("href", "./assets/" + newTheme + ".css")
+
+    });
     
-   
     
 
 })    
