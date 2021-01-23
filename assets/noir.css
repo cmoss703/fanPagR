@@ -4,10 +4,12 @@
 header  {
     background-color: #212121;
     color: white;
-    font-family: 'Orbitron', sans-serif;
+    /* font-family: 'Orbitron', sans-serif; */
     font-size: 40px;
     text-align: center;
     padding: 20px;
+    margin-top: 10px;
+
 }
 
 section,
@@ -17,16 +19,17 @@ aside
     color: black;
     box-shadow: 5px 5px 8px black;
     padding: 20px;
-    /* margin: 10px; */
 
 }
 
 nav {
     background-color: #212121;
+    padding-left: 20px;
+
 }
 
 body  {
     background-color:#e0e0e0;
-    background-image: url("../images/noirBG.jpg");
+    background-image: url("../images/noirBG.png");
     background-size: cover;
 }

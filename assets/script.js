@@ -5,57 +5,86 @@
 
 
 $(document).ready( function () {
-var userInput = prompt("Enter a movie or TV show to search");
-var title = userInput.trim().split(" ").join("+");
-// Materialize method to auto-init all JavaScript functionality
-M.AutoInit();
-// // Materialize functionality for dropdowns
-// $(".dropdown-trigger").dropdown();
-// // To move the navbar to the side on mobile:  
-// $('.sidenav').sidenav();
+    // Materialize method to auto-init all JavaScript functionality
+    M.AutoInit();
 
-// OMDB
+    $("#add-media").on("click", function (event) {
+        event.preventDefault();
+        
+        var title = $("#media-input").val().trim().split(" ").join("+");
 
-var actors;
+        // $("#landing-page").style.display = "none";
+        // $("#searched").style.display = "block";
+        
+        // // Materialize functionality for dropdowns
+        // $(".dropdown-trigger").dropdown();
+        // // To move the navbar to the side on mobile:  
+        // $('.sidenav').sidenav();
+        
+        // OMDB
+        $.ajax ({
+            url: "http://www.omdbapi.com/?t=" + title + "&plot=full&apikey=1d96ca81",
+            method: "GET",
+            dataType: "jsonp"
+        })
+            .done( function(response) {
+                console.log("OMDB", response);
+                console.log("------------------------");
+        
+                var imagePoster = $("<img>").attr("src", response.Poster).addClass("responsive-img")
+                    genre = response.Genre
+                    actors = response.Actors;
+        
+                console.log(actors);
+        
+                $("#sidebar").prepend(imagePoster);
+                $(".media-title").text(response.Title + " (" + response.Year + ")");
+                $(".synopsis").text(response.Plot);
+            });
+    
+        // GIPHY
+        $.ajax ({
+            url: "https://api.giphy.com/v1/gifs/search?api_key=PorPxXd5WaUPFvGd2oLlj4n8kI1EbG99&q=" + title + "&limit=5&offset=0&rating=g&lang=en",
+            method:"GET"
+        })
+            .done( function(response) {
+                console.log("GIPHY", response);
+                console.log("------------------------");
 
-$.ajax ({
-    url: "http://www.omdbapi.com/?t=" + title + "&plot=full&apikey=1d96ca81",
-    method: "GET",
-})
-    .done( function(response) {
-        console.log("OMDB", response);
-        console.log("------------------------");
+                for (var i = 0; i < response.data.length; i++) {
 
-        var imagePoster = $("<img>").attr("src", response.Poster)
-            genre = response.Genre;
-        actors = response.Actors;
+                var gifURL = $("<img>").attr("src", response.data[i].images.fixed_height.url).addClass("responsive-img");
 
-        console.log(actors);
+                $("#sidebar").append(gifURL);
 
-        $("#sidebar").html(imagePoster);
-        $(".media-title").text(response.Title + " (" + response.Year + ")");
-        $(".synopsis").text(response.Plot);
+                }
+
+            });
+    
+    
+        // TasteDive
+        
+        $.ajax ({
+            url: "https://tastedive.com/api/similar?q=" + title+ "&info=1&limit=4&k=400006-fanPagr-OP0T5H8C",
+            method: "GET",
+            dataType: "jsonp"
+        })
+            .done( function(response) {
+                console.log("TasteDive", response);
+                console.log("------------------------")
+            })
+    })
+
+    $(".cssClass").on("click", function (event) {
+
+        event.preventDefault();
+
+        var newTheme = $(this).attr("id")
+
+        $("#csstheme").attr("href", "./assets/" + newTheme + ".css")
+
     });
-// GIPHY
-$.ajax ({
-    url: "https://api.giphy.com/v1/gifs/search?api_key=PorPxXd5WaUPFvGd2oLlj4n8kI1EbG99&q=" + title + "&limit=5&offset=0&rating=g&lang=en",
-    method:"GET"
-})
-    .done( function(response) {
-        console.log("GIPHY", response);
-        console.log("------------------------")
-    });
-// TasteDive
+    
+    
 
-// $.ajax ({
-//     url: "https://tastedive.com/api/similar?q=" + title+ "&info=1&limit=4&k=400006-fanPagr-OP0T5H8C",
-//     method: "GET"
-// })
-//     .done( function(response) {
-//         console.log("TasteDive", response);
-//         console.log("------------------------")
-//     })
-
-// Function for when button is clicked:
-
-})
+})    

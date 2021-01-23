@@ -9,9 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap" rel="stylesheet">
     <!-- font-family: 'Proza Libre', sans-serif; -->
+    <!-- romance header font-->
     <link href='https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap' rel='stylesheet'>
+
+    <!--sciFi header font-->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/noir.css" />
+
+    <!-- horror header font -->
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" id="csstheme" href="./assets/default.css" />
     <title>fanPagR</title>
 </head>
 
@@ -28,10 +34,19 @@
     </nav> -->
     <!-- Dropdown Structure -->
     <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!">Sci-Fi</a></li>
-        <li><a href="#!">Kids</a></li>
+        <li id="sciFi" class="cssClass"><a href="#!">Sci-Fi</a></li>
+        <li id="romance" class="cssClass"><a href="#!">Romance</a></li>
         <!-- <li class="divider"></li> -->
-        <li><a href="#!">Noir</a></li>
+        <li id="noir" class="cssClass"><a href="#!">Noir</a></li>
+        <li id="default" class="cssClass"><a href="#!">Default</a></li>
+        <li id="action" class="cssClass"><a href="#!">Action</a></li>
+        <li id="horror" class="cssClass"><a href="#!">Horror</a></li>
+        <li id="kids" class="cssClass"><a href="#!">Kids</a></li>
+        <li id="comedy" class="cssClass"><a href="#!">Comedy</a></li>
+    </ul>
+    <ul id="dropdown2" class="dropdown-content">
+        <li><a href="#!">First Title</a></li>
+        <li><a href="#!">Second Title</a></li>
     </ul>
     <nav>
         <div class="nav-wrapper">
@@ -39,10 +54,11 @@
             <a href="#!" class="brand-logo">fanPagR</a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="#">Home</a></li>
-                <li id="saved-titles"><a href="#">Saved Titles</a></li>
-                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-trigger saved-titles" href="#!" data-target="dropdown2">Saved Titles<i
+                    class="material-icons right">arrow_drop_down</i></a></li>
                 <li><a class="dropdown-trigger themes" href="#!" data-target="dropdown1">Themes<i
                             class="material-icons right">arrow_drop_down</i></a></li>
+
             </ul>
         </div>
     </nav>
@@ -52,7 +68,7 @@
         <li><a href="#">Themes</a></li>
     </ul>
 
-    <div id="landing-page" style="display: block;">
+    <div id="landing-page" class="container" style="display: block;">
         <h1>fanPagR</h1>
         <form id="media-form">
             <label for="media-input">Search for your favorite movie or TV show!</label>
@@ -67,13 +83,13 @@
             <div class="row">
                 <header class="center media-title">Title Placeholder</header>
             </div>
-            <div class="row main-grid">
-                <div class="col s9 media-stuff">
+            <div class="row ">
+                <div class="col s8 media-stuff">
                     <section class="row synopsis">Plot:</section>
                     <section class="row media-actors">Actors:</section>
                     <section class="row related">Related Content</section>
                 </div>
-                <aside class="col s3" id="sidebar">sidebar</aside>
+                <aside class="col s3 offset-s1" id="sidebar"></aside>
             </div>
 
         </div>
