@@ -1,0 +1,34 @@
+/* comedy theme */
+
+body  {
+    background-color: #b3e5fc;
+    background-image: url("../images/comedyBG.png");
+    background-size: cover;
+
+}
+
+section,
+aside  
+{
+    background-color: #80d8ff;
+    box-shadow: 5px 5px 8px black;
+    padding: 20px;
+
+}
+
+header  {
+    background-color: #40c4ff;
+    color: white;
+    font-family: 'Syncopate', sans-serif;    
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+
+}
+
+nav {
+    background-color: #40c4ff  ;
+    padding-left: 20px;
+
+}

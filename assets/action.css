@@ -1,0 +1,35 @@
+/* action theme */
+
+body  {
+    background-color: #bdbdbd;
+    background-image: url("../images/actionBG.png");
+    background-size: cover;
+
+}
+
+section,
+aside  
+{
+    background-color: #424242;
+    color: white;
+    box-shadow: 5px 5px 8px black;
+    padding: 20px;
+
+}
+
+header  {
+    background-color: #d50000;
+    color: white;
+    font-family: 'Russo One', sans-serif;    
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+
+}
+
+nav {
+    background-color: #d50000 ;
+    padding-left: 20px;
+
+}
