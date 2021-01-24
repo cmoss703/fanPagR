@@ -7,6 +7,7 @@ header  {
     font-size: 40px;
     text-align: center;
     padding: 20px;
+    margin-top: 10px;
 }
 
 section,
@@ -22,10 +23,6 @@ aside
 
 nav {
     background-color: #ee6e73;
+    padding-left: 20px;
 }
 
-/* body  {
-    background-color:#e0e0e0;
-    background-image: url("../images/noirBG.jpg");
-    background-size: cover;
-} */

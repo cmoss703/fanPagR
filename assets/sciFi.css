@@ -1,7 +1,7 @@
 /* sci fi theme */
 
 body  {
-    background-color: #efebe9;
+    background-color: #d7ccc8;
     background-image: url("../images/sciFiBG.png");
     background-size: cover;
 
@@ -12,7 +12,6 @@ aside
 {
     background-color: #a1887f;
     box-shadow: 5px 5px 8px black;
-    /* opacity: .95; */
     padding: 20px;
 
 }
@@ -24,8 +23,12 @@ header  {
     font-size: 40px;
     text-align: center;
     padding: 20px;
+    margin-top: 10px;
+
 }
 
 nav {
     background-color: #4e342e;
+    padding-left: 20px;
+
 }

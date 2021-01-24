@@ -7,6 +7,7 @@ header  {
     font-size: 40px;
     text-align: center;
     padding: 20px;
+    margin-top: 10px;
 
 }
 
@@ -21,6 +22,8 @@ aside
 
 nav {
     background-color: #ad1457;
+    padding-left: 20px;
+
 }
 
 body  {
