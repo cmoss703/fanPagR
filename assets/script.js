@@ -94,7 +94,7 @@ $(document).ready( function () {
 
                 <div class="card blue-grey darken-4">
                     <div class="card-image waves-effect waves-block waves-light">
-                      <iframe class="activator" width="630" height="400" src="${relatedContent[i].yUrl}"></iframe>
+                      <iframe class="activator" width="100%" height="400" src="${relatedContent[i].yUrl}"></iframe>
                     </div>
                     <div class="card-content">
                       <span class="card-title activator white-text">${relatedContent[i].Name}<i class="material-icons right">more_vert</i></span>
