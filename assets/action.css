@@ -3,8 +3,8 @@
 body  {
     background-color: #bdbdbd;
     background-image: url("../images/actionBG.png");
-    background-size: cover;
-
+    /* background-size: cover; */
+    background-repeat: repeat;
 }
 
 section,
@@ -31,5 +31,23 @@ header  {
 nav {
     background-color: #d50000 ;
     padding-left: 20px;
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 768px) {
+
+    body {
+  background-image: none;
+}
+
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+    body {
+  background-image: none;
+}
 
 }
