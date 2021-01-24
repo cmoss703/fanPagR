@@ -29,6 +29,25 @@ nav {
 body  {
     background-color: #fce4ec;
     background-image: url("../images/romanceBG.png");
-    background-size: cover;
+    /* background-size: cover; */
+    background-repeat: repeat;
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 768px) {
+
+    body {
+  background-image: none;
+}
+
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+    body {
+  background-image: none;
+}
+
 }
 

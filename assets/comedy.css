@@ -3,8 +3,8 @@
 body  {
     background-color: #b3e5fc;
     background-image: url("../images/comedyBG.png");
-    background-size: cover;
-
+    /* background-size: cover; */
+    background-repeat: repeat;
 }
 
 section,
@@ -32,3 +32,22 @@ nav {
     padding-left: 20px;
 
 }
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 768px) {
+
+    body {
+  background-image: none;
+}
+
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+    body {
+  background-image: none;
+}
+
+}
+
