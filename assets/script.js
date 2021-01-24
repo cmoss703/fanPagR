@@ -8,18 +8,17 @@ $(document).ready( function () {
     // Materialize method to auto-init all JavaScript functionality
     M.AutoInit();
 
-    $("#add-media").on("click", function (event) {
-        event.preventDefault();
-        
-        var title = $("#media-input").val().trim().split(" ").join("+");
-      
+    $("#searched").hide();
+
         // $("#landing-page").style.display = "none";
         // $("#searched").style.display = "block";
-        
-        // // Materialize functionality for dropdowns
-        // $(".dropdown-trigger").dropdown();
-        // // To move the navbar to the side on mobile:  
-        // $('.sidenav').sidenav();
+
+    $("#add-media").on("click", function (event) {
+        event.preventDefault();
+        $(".media").html("");
+        $("#searched").show();
+
+        var title = $("#media-input").val().trim().split(" ").join("+");
         
         // OMDB
         $.ajax ({
@@ -28,19 +27,38 @@ $(document).ready( function () {
             dataType: "jsonp"
         })
             .done( function(response) {
-                console.log("OMDB", response);
-                console.log("------------------------");
+    
+                var imagePoster = $("<img>").attr("src", response.Poster).attr("class", "responsive-img");
+                    genre = response.Genre;
+                    actors = response.Actors.split(",");
         
-                var imagePoster = $("<img>").attr("src", response.Poster).addClass("responsive-img")
-                    genre = response.Genre
-                    actors = response.Actors;
-        
-                console.log(actors);
+                    
         
                 $("#sidebar").prepend(imagePoster);
                 $(".media-title").text(response.Title + " (" + response.Year + ")");
                 $(".synopsis").text(response.Plot);
-            });
+
+                // TVMaze
+                for (let i=0; i < 2 ; i++ ){
+                    $.ajax({
+                        url: "http://api.tvmaze.com/search/people?q=" + actors[i].split(" ").join("+"),
+                        method: "GET",
+                    })
+                        .done( function (response) {
+                            
+                            var newActorCards = (`
+                            <div class="card blue-grey darken-4">
+                                
+                                <span class="card-title">${response[0].person.name}</span>
+                            </div>        
+                            `);
+                            $(".actors").append(newActorCards);
+                        
+                           
+                        });
+                }        
+            });        
+            
     
         // GIPHY
         $.ajax ({
@@ -48,8 +66,6 @@ $(document).ready( function () {
             method:"GET"
         })
             .done( function(response) {
-                console.log("GIPHY", response);
-                console.log("------------------------");
 
                 for (var i = 0; i < response.data.length; i++) {
 
@@ -70,22 +86,36 @@ $(document).ready( function () {
             dataType: "jsonp"
         })
             .done( function(response) {
-                console.log("TasteDive", response);
-                console.log("------------------------");
 
                 var relatedContent = response.Similar.Results;
-                console.log(relatedContent);
 
                 for (i=0;i<relatedContent.length;i++) {
-                    var newRelated = $(`<div class="col s12 m6"><div class="card"><div class="card-content"><p>${relatedContent[i].Name}</p><p><a href="${relatedContent[i].wUrl}" target="_blank">Go to Wikipedia for more info</a></p><p>${relatedContent[i].wTeaser}</p></div></div></div>`);
-                    $(".related").append(newRelated)
-                };
+                    var newRelated = $(`
+
+                <div class="card blue-grey darken-4">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <iframe class="activator" width="630" height="400" src="${relatedContent[i].yUrl}"></iframe>
+                    </div>
+                    <div class="card-content">
+                      <span class="card-title activator white-text">${relatedContent[i].Name}<i class="material-icons right">more_vert</i></span>
+                      <p><a href="${relatedContent[i].wUrl}" target="_blank">Go to Wikipedia for more info</a></p>
+                    </div>
+                    <div class="card-reveal">
+                      <span class="card-title grey-text">${relatedContent[i].Name}<i class="material-icons right">close</i></span>
+                      <p class="grey-text">${relatedContent[i].wTeaser}</p>
+                    </div>
+                </div>
+        
+                    `);
+                    
+                    $(".related").append(newRelated);
+                }
                 
                 
 
             })
-    })
-
+    });
+    
     $(".cssClass").on("click", function (event) {
 
         event.preventDefault();
