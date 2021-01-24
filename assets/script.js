@@ -39,7 +39,7 @@ $(document).ready( function () {
                 $(".synopsis").text(response.Plot);
 
                 // TVMaze
-                for (let i=0; i < 2 ; i++ ){
+                for (let i=0; i < actors.length ; i++ ){
                     $.ajax({
                         url: "http://api.tvmaze.com/search/people?q=" + actors[i].split(" ").join("+"),
                         method: "GET",
