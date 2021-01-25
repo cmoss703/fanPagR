@@ -9,8 +9,8 @@ $(document).ready( function () {
     M.AutoInit();
 
     for (var i = 0; i < localStorage.length; i++) {
-        $("#dropdown2").append(`<li><a href="#!">${localStorage.getItem(localStorage.key(i))}</a></li>`);
-        $("#dropdown4").append(`<li><a href="#!">${localStorage.getItem(localStorage.key(i))}</a></li>`)
+        $("#dropdown2").append(`<li><a href="#!" class="savedTitle">${localStorage.getItem(localStorage.key(i))}</a></li>`);
+        $("#dropdown4").append(`<li><a href="#!" class="savedTitle">${localStorage.getItem(localStorage.key(i))}</a></li>`)
     }
 
     $("#searched").hide();
@@ -134,9 +134,10 @@ $(document).ready( function () {
         event.preventDefault();
         var title = $(".media-title").text();
         if (localStorage.getItem(title) === null){
+            M.toast({html: "Fan paged saved!"});
             localStorage.setItem(title,title);
         } else if (localStorage.getItem(title) !== null) {
-            M.toast({html: "You already saved this fan page!"})
+            M.toast({html: "You already saved this fan page!"});
         }
         
     })
