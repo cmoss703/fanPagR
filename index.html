@@ -55,28 +55,33 @@
         <li id="comedy" class="cssClass"><a href="#!">Comedy</a></li>
     </ul>
     <ul id="dropdown2" class="dropdown-content">
-        <li><a href="#!">First Title</a></li>
-        <li><a href="#!">Second Title</a></li>
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">three</a></li>
     </ul>
+
     <nav>
         <div class="nav-wrapper">
 
             <a href="#!" class="brand-logo">fanPagR</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"></i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="#">Home</a></li>
-                <li><a class="dropdown-trigger saved-titles" href="#!" data-target="dropdown2">Saved Titles<i
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Saved Titles<i
                     class="material-icons right">arrow_drop_down</i></a></li>
-                <li><a class="dropdown-trigger themes" href="#!" data-target="dropdown1">Themes<i
-                            class="material-icons right">arrow_drop_down</i></a></li>
-
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Themes<i
+                    class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
         </div>
     </nav>
+
     <ul class="sidenav" id="mobile-demo">
         <li><a href="#">Home</a></li>
-        <li><a href="#">Saved Titles</a></li>
-        <li><a href="#">Themes</a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Saved Titles<i
+            class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Themes<i
+            class="material-icons right">arrow_drop_down</i></a></li>
     </ul>
 
     <div id="landing-page" class="container" style="display: block;">
@@ -92,9 +97,9 @@
     <div id="searched" style="display: block;">
         <div class="container">
             <div class="row">
-                <header class="center media-title">Title Placeholder</header>
+                <header class="center"><span class="media-title"></span><span class="media-year"></span></header>
             </div>
-            <div class="row ">
+            <div class="row">
                 <div class="col s8 media-stuff">
 
                     <section class="row">
@@ -112,8 +117,17 @@
             </div>
 
         </div>
+
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large red">
+              <i class="large material-icons">mode_edit</i>
+            </a>
+            <ul>
+              <li><a class="btn-floating green" id="saveButton" title="Save this fan page!"><i class="material-icons">publish</i></a></li>
+            </ul>
+          </div>
     </div>
-    </div>
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
