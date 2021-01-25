@@ -26,3 +26,7 @@ nav {
     padding-left: 20px;
 }
 
+.actorPhoto{
+    max-height: 25%;
+    max-width: 100%;
+}

@@ -8,21 +8,23 @@ $(document).ready( function () {
     // Materialize method to auto-init all JavaScript functionality
     M.AutoInit();
 
-    $("#searched").hide();
+    for (var i = 0; i < localStorage.length; i++) {
+        $("#dropdown2").append(`<li><a href="#!" class="savedTitle">${localStorage.getItem(localStorage.key(i))}</a></li>`);
+        $("#dropdown4").append(`<li><a href="#!" class="savedTitle">${localStorage.getItem(localStorage.key(i))}</a></li>`)
+    }
 
-        // $("#landing-page").style.display = "none";
-        // $("#searched").style.display = "block";
+    $("#searched").hide();
 
     $("#add-media").on("click", function (event) {
         event.preventDefault();
         $(".media").html("");
         $("#searched").show();
 
-        var title = $("#media-input").val().trim().split(" ").join("+");
+        var queryTitle = $("#media-input").val().trim().split(" ").join("+");
         
         // OMDB
         $.ajax ({
-            url: "http://www.omdbapi.com/?t=" + title + "&plot=full&apikey=1d96ca81",
+            url: "http://www.omdbapi.com/?t=" + queryTitle + "&plot=full&apikey=1d96ca81",
             method: "GET",
             dataType: "jsonp"
         })
@@ -35,7 +37,8 @@ $(document).ready( function () {
                     
         
                 $("#sidebar").prepend(imagePoster);
-                $(".media-title").text(response.Title + " (" + response.Year + ")");
+                $(".media-title").text(response.Title);
+                $(".media-year").text(" (" + response.Year + ")");
                 $(".synopsis").text(response.Plot);
 
                 // TVMaze
@@ -45,24 +48,25 @@ $(document).ready( function () {
                         method: "GET",
                     })
                         .done( function (response) {
-                            
-                            var newActorCards = (`
-                            <div class="card blue-grey darken-4">
-                                
-                                <span class="card-title">${response[0].person.name}</span>
-                            </div>        
+
+                                var newActorCards = (`
+                                <div class="card blue-grey darken-4">
+                                <div class="card-image">
+                                    <img class="actorPhoto" src="${response[0].person.image["original"]}">
+                                 </div>
+                                    <span class="card-title">${response[0].person.name}</span>
+                                </div>        
                             `);
                             $(".actors").append(newActorCards);
-                        
-                           
-                        });
+                                
+                       });            
                 }        
             });        
             
     
         // GIPHY
         $.ajax ({
-            url: "https://api.giphy.com/v1/gifs/search?api_key=PorPxXd5WaUPFvGd2oLlj4n8kI1EbG99&q=" + title + "&limit=5&offset=0&rating=g&lang=en",
+            url: "https://api.giphy.com/v1/gifs/search?api_key=PorPxXd5WaUPFvGd2oLlj4n8kI1EbG99&q=" + queryTitle + "&limit=5&offset=0&rating=g&lang=en",
             method:"GET"
         })
             .done( function(response) {
@@ -81,7 +85,7 @@ $(document).ready( function () {
         // TasteDive
         
         $.ajax ({
-            url: "https://tastedive.com/api/similar?q=" + title+ "&info=1&limit=4&k=400006-fanPagr-OP0T5H8C",
+            url: "https://tastedive.com/api/similar?q=" + queryTitle + "&info=1&limit=4&k=400006-fanPagr-OP0T5H8C",
             method: "GET",
             dataType: "jsonp"
         })
@@ -92,9 +96,11 @@ $(document).ready( function () {
                 for (i=0;i<relatedContent.length;i++) {
                     var newRelated = $(`
 
-                <div class="card blue-grey darken-4">
+                <div class="card hoverable blue-grey darken-4">
                     <div class="card-image waves-effect waves-block waves-light">
-                      <iframe class="activator" width="100%" height="400" src="${relatedContent[i].yUrl}"></iframe>
+                      <div class="video-container">
+                        <iframe class="activator" src="${relatedContent[i].yUrl}"></iframe>
+                      </div> 
                     </div>
                     <div class="card-content">
                       <span class="card-title activator white-text">${relatedContent[i].Name}<i class="material-icons right">more_vert</i></span>
@@ -109,9 +115,7 @@ $(document).ready( function () {
                     `);
                     
                     $(".related").append(newRelated);
-                }
-                
-                
+                } 
 
             })
     });
@@ -125,6 +129,18 @@ $(document).ready( function () {
         $("#csstheme").attr("href", "./assets/" + newTheme + ".css")
 
     });
+
+    $("#saveButton").on("click", function(event) {
+        event.preventDefault();
+        var title = $(".media-title").text();
+        if (localStorage.getItem(title) === null){
+            M.toast({html: "Fan paged saved!"});
+            localStorage.setItem(title,title);
+        } else if (localStorage.getItem(title) !== null) {
+            M.toast({html: "You already saved this fan page!"});
+        }
+        
+    })
     
     
 
