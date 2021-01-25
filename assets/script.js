@@ -10,6 +10,7 @@ $(document).ready( function () {
 
     for (var i = 0; i < localStorage.length; i++) {
         $("#dropdown2").append(`<li><a href="#!">${localStorage.getItem(localStorage.key(i))}</a></li>`);
+        $("#dropdown4").append(`<li><a href="#!">${localStorage.getItem(localStorage.key(i))}</a></li>`)
     }
 
     $("#searched").hide();
@@ -51,7 +52,7 @@ $(document).ready( function () {
                                 var newActorCards = (`
                                 <div class="card blue-grey darken-4">
                                 <div class="card-image">
-                                    <img class="actorPhoto" src="${response[0].person.image["medium"]}">
+                                    <img class="actorPhoto" src="${response[0].person.image["original"]}">
                                  </div>
                                     <span class="card-title">${response[0].person.name}</span>
                                 </div>        
