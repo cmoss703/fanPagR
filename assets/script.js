@@ -52,7 +52,7 @@ $(document).ready(function () {
 
                             var newActorCards =
                                     (`
-                                    <div class="card blue-grey darken-4 col l6 s12">
+                                    <div class="card col l6 s12">
                                     <div class="card-image">
                                         <img class="actorPhoto" src="${response[0].person.image["original"]}">
                                         <span class="card-title">${response[0].person.name}</span>
@@ -100,7 +100,7 @@ $(document).ready(function () {
                 for (i = 0; i < relatedContent.length; i++) {
                     var newRelated = $(`
 
-                <div class="card hoverable blue-grey darken-4">
+                <div class="card hoverable">
                     <div class="card-image waves-effect waves-block waves-light">
                       <div class="video-container">
                         <iframe class="activator" src="${relatedContent[i].yUrl}"></iframe>
@@ -146,9 +146,8 @@ $(document).ready(function () {
 
     })
 
-    $("#newSearch").on("click", function () {
+    $(".newSearch").on("click", function () {
         location.reload();
     })
-
 
 })    
