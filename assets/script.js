@@ -64,6 +64,8 @@ $(document).ready(function () {
                     })
                         .done(function (response) {
 
+                            var actorLink = $("<a>").attr("href", response[0].person.url);
+
                             var newActorCards =
                                     (`
                                     <div class="card col l6 s12">
@@ -75,7 +77,7 @@ $(document).ready(function () {
       
                                 `);
 
-                            $(".actors").append(newActorCards).addClass("responsive-img");
+                            $(".actors").append(actorLink.append(newActorCards).addClass("responsive-img"));
 
                         });
                 }
@@ -138,7 +140,10 @@ $(document).ready(function () {
             })
 
     };
-    
+
+    $(".newSearch").on("click", function () {
+        location.reload();
+    });    
 
     $(".cssClass").on("click", function (event) {
 
