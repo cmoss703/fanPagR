@@ -39,7 +39,7 @@ $(document).ready(function () {
 
         // OMDB
         $.ajax({
-            url: "http://www.omdbapi.com/?t=" + queryTitle + "&plot=full&apikey=1d96ca81",
+            url: "https://www.omdbapi.com/?t=" + queryTitle + "&plot=full&apikey=1d96ca81",
             method: "GET",
             dataType: "jsonp"
         })
@@ -59,7 +59,7 @@ $(document).ready(function () {
                 // TVMaze
                 for (let i = 0; i < actors.length; i++) {
                     $.ajax({
-                        url: "http://api.tvmaze.com/search/people?q=" + actors[i].split(" ").join("+"),
+                        url: "https://api.tvmaze.com/search/people?q=" + actors[i].split(" ").join("+"),
                         method: "GET",
                     })
                         .done(function (response) {
