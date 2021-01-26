@@ -143,6 +143,9 @@ $(document).ready( function () {
         
     })
     
+    $("#newSearch").on("click", function(){
+        location.reload();
+    })
     
 
 })    
