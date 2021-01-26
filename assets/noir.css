@@ -12,6 +12,11 @@ header  {
 
 }
 
+h4 {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 section,
 aside
 {
@@ -35,8 +40,8 @@ body  {
     background-repeat: repeat;
 }
 
-.card-title {
-    color: rgb(255, 255, 255);
+.card {
+    background-color: #212121;
 }
 
 #fanpagr-text {
