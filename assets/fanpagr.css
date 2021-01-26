@@ -1,3 +1,5 @@
 .actorPhoto {
-    
+    width:  100px;
+    height: 300px;
+    object-fit: cover;
 }
