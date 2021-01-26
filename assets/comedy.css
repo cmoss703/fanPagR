@@ -27,10 +27,19 @@ header  {
 
 }
 
+h4 {
+    color: white;
+    font-family: 'Syncopate', sans-serif;  
+}
+
 nav {
     background-color: #40c4ff  ;
     padding-left: 20px;
 
+}
+
+.card {
+    background-color: #40c4ff;
 }
 
 /* Landscape phones and portrait tablets */

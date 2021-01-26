@@ -64,18 +64,28 @@ $(document).ready(function () {
                     })
                         .done(function (response) {
 
+                            var actorLink = $("<a>").attr("href", response[0].person.url);
+                            console.log(response);
+
+
+                            var actorLink = $("<a>").attr("href", response[0].person.url);
+
+
                             var newActorCards =
                                     (`
                                     <div class="card col l6 s12">
                                     <div class="card-image">
                                         <img class="actorPhoto" src="${response[0].person.image["original"]}">
-                                        <span class="card-title">${response[0].person.name}</span>
+                                        <span class="card-title white-text">${response[0].person.name}</span>
                                         </div>  
                                         </div>
-      
                                 `);
 
-                            $(".actors").append(newActorCards).addClass("responsive-img");
+                            $(".actors").append(actorLink.append(newActorCards).addClass("responsive-img"));
+
+
+                            $(".actors").append(actorLink.append(newActorCards).addClass("responsive-img"));
+
 
                         });
                 }
@@ -125,7 +135,7 @@ $(document).ready(function () {
                       <p><a href="${relatedContent[i].wUrl}" target="_blank">Go to Wikipedia for more info</a></p>
                     </div>
                     <div class="card-reveal">
-                      <span class="card-title grey-text">${relatedContent[i].Name}<i class="material-icons right">close</i></span>
+                      <span class="card-title white-text">${relatedContent[i].Name}<i class="material-icons right">close</i></span>
                       <p class="grey-text">${relatedContent[i].wTeaser}</p>
                     </div>
                 </div>
@@ -138,7 +148,10 @@ $(document).ready(function () {
             })
 
     };
-    
+
+    $(".newSearch").on("click", function () {
+        location.reload();
+    });    
 
     $(".cssClass").on("click", function (event) {
 

@@ -5,3 +5,8 @@
     object-fit: cover;
 
 }
+
+.card-title {
+    opacity: 0.5;
+    background-color: black;
+}

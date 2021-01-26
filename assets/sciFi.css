@@ -18,7 +18,7 @@ aside
 
 header  {
     background-color: #4e342e;
-    color: white;
+    color: rgba(143, 248, 143, 0.925);
     font-family: 'Orbitron', sans-serif;
     font-size: 40px;
     text-align: center;
@@ -27,10 +27,24 @@ header  {
 
 }
 
+h4 {
+    color: rgba(143, 248, 143, 0.925);
+    font-family: 'Orbitron', sans-serif;
+}
+
 nav {
     background-color: #4e342e;
     padding-left: 20px;
 
+}
+
+.card {
+    background-color: #4e342e;
+}
+
+.card-title {
+    opacity: 0.5;
+    background-color: black;
 }
 
 /* Landscape phones and portrait tablets */
