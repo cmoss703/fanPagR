@@ -17,6 +17,11 @@ aside
 
 }
 
+h4 {
+    color: white;
+    font-family: 'Russo One', sans-serif; 
+}
+
 header  {
     background-color: #d50000;
     color: white;
@@ -28,10 +33,19 @@ header  {
 
 }
 
+h4 {
+    color: white;
+    font-family: 'Russo One', sans-serif; 
+}
+
 nav {
     background-color: #d50000 ;
     padding-left: 20px;
 
+}
+
+.card {
+    background-color: #d50000;
 }
 
 /* Landscape phones and portrait tablets */

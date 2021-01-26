@@ -16,6 +16,11 @@ aside
 
 }
 
+h4 {
+    color: white;
+    font-family: 'IM Fell DW Pica SC', serif;
+}
+
 header  {
     background-color: #37474f ;
     color: white;
@@ -27,10 +32,19 @@ header  {
 
 }
 
+h4 {
+    color: white;
+    font-family: 'IM Fell DW Pica SC', serif;
+}
+
 nav {
     background-color: #37474f;
     padding-left: 20px;
 
+}
+
+.card {
+    background-color: #37474f ;
 }
 
 /* Landscape phones and portrait tablets */

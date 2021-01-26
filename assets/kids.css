@@ -27,10 +27,19 @@ header  {
 
 }
 
+h4 {
+    color: white;
+    font-family: 'Do Hyeon', sans-serif;
+}
+
 nav {
     background-color: #ff5722  ;
     padding-left: 20px;
 
+}
+
+.card {
+    background-color: #4527a0;
 }
 
 /* Landscape phones and portrait tablets */

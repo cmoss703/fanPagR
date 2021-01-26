@@ -11,6 +11,11 @@ header  {
 
 }
 
+h4 {
+    color: white;
+    font-family: 'Great Vibes', cursive;
+}
+
 section,
 aside
 {
@@ -31,6 +36,10 @@ body  {
     background-image: url("../images/romanceBG.png");
     /* background-size: cover; */
     background-repeat: repeat;
+}
+
+.card {
+    background-color: #ad1457;
 }
 
 #search-text {
