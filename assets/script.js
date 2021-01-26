@@ -8,20 +8,34 @@ $(document).ready( function () {
     // Materialize method to auto-init all JavaScript functionality
     M.AutoInit();
 
+    savetoNav();
+
+    function savetoNav() {
+    
     for (var i = 0; i < localStorage.length; i++) {
-        $("#dropdown2").append(`<li><a href="#!" class="savedTitle">${localStorage.getItem(localStorage.key(i))}</a></li>`);
-        $("#dropdown4").append(`<li><a href="#!" class="savedTitle">${localStorage.getItem(localStorage.key(i))}</a></li>`)
-    }
+        $("#dropdown2").append(`<li><a href="#!" class="savedTitle">${localStorage.key(i)}</a></li>`);
+        $("#dropdown4").append(`<li><a href="#!" class="savedTitle">${localStorage.key(i)}</a></li>`)
+    }};
 
     $("#searched").hide();
 
+    var queryTitle;
+
     $("#add-media").on("click", function (event) {
         event.preventDefault();
+
+        queryTitle = $("#media-input").val().trim().split(" ").join("+");
+
+        addMedia(queryTitle);
+    });
+
+    
+
+    function addMedia(queryTitle) {
+
         $(".media").html("");
         $("#searched").show();
         $("#landing-page").hide();
-
-        var queryTitle = $("#media-input").val().trim().split(" ").join("+");
         
         // OMDB
         $.ajax ({
@@ -119,7 +133,7 @@ $(document).ready( function () {
                 } 
 
             })
-    });
+    };
     
     $(".cssClass").on("click", function (event) {
 
@@ -134,15 +148,41 @@ $(document).ready( function () {
     $("#saveButton").on("click", function(event) {
         event.preventDefault();
         var title = $(".media-title").text();
+        var theme = $("#csstheme").attr("href");
+        var titleObject = {'title': title, 'theme': theme};
+
         if (localStorage.getItem(title) === null){
             M.toast({html: "Fan paged saved!"});
-            localStorage.setItem(title,title);
+            localStorage.setItem(title , JSON.stringify(titleObject));
         } else if (localStorage.getItem(title) !== null) {
             M.toast({html: "You already saved this fan page!"});
-        }
+        };
+        console.log(localStorage.getItem(title))
+        $("#dropdown2").html('');
+        $("#dropdown4").html('');
+
+        savetoNav();
+
+        addMedia(queryTitle);
         
     })
     
-    
+    $("#dropdown2").on("click", "li", function (event) {
+
+        event.preventDefault();
+
+        var title = $(this).text();
+
+        queryTitle = $(this).text().trim().split(" ").join("+");
+
+        addMedia(queryTitle);
+
+        var titleObject = localStorage.getItem(title);
+
+        var newTheme = JSON.parse(titleObject).theme;
+
+        $("#csstheme").attr("href", newTheme)
+
+    })
 
 })    
