@@ -4,7 +4,7 @@
 // TVMaze API for images of actors:  http://api.tvmaze.com/search/people?q=???
 
 
-$(document).ready( function () {
+$(document).ready(function () {
     // Materialize method to auto-init all JavaScript functionality
     M.AutoInit();
 
@@ -36,82 +36,85 @@ $(document).ready( function () {
         $(".media").html("");
         $("#searched").show();
         $("#landing-page").hide();
-        
+
         // OMDB
-        $.ajax ({
+        $.ajax({
             url: "http://www.omdbapi.com/?t=" + queryTitle + "&plot=full&apikey=1d96ca81",
             method: "GET",
             dataType: "jsonp"
         })
-            .done( function(response) {
-    
+            .done(function (response) {
+
                 var imagePoster = $("<img>").attr("src", response.Poster).attr("class", "responsive-img");
-                    genre = response.Genre;
-                    actors = response.Actors.split(",");
-        
-                    
-        
+                genre = response.Genre;
+                actors = response.Actors.split(",");
+
+
+
                 $("#sidebar").prepend(imagePoster);
                 $(".media-title").text(response.Title);
                 $(".media-year").text(" (" + response.Year + ")");
                 $(".synopsis").text(response.Plot);
 
                 // TVMaze
-                for (let i=0; i < actors.length ; i++ ){
+                for (let i = 0; i < actors.length; i++) {
                     $.ajax({
                         url: "http://api.tvmaze.com/search/people?q=" + actors[i].split(" ").join("+"),
                         method: "GET",
                     })
-                        .done( function (response) {
+                        .done(function (response) {
 
-                                var newActorCards = (`
-                                <div class="card blue-grey darken-4 col l3 s12">
-                                <div class="card-image">
-                                    <img class="actorPhoto" src="${response[0].person.image["original"]}">
-                                 </div>
-                                    <div class="card-title">${response[0].person.name}</div>
-                                </div>        
-                            `);
+                            var newActorCards =
+                                    (`
+                                    <div class="card col l6 s12">
+                                    <div class="card-image">
+                                        <img class="actorPhoto" src="${response[0].person.image["original"]}">
+                                        <span class="card-title">${response[0].person.name}</span>
+                                        </div>  
+                                        </div>
+      
+                                `);
+
                             $(".actors").append(newActorCards).addClass("responsive-img");
-                                
-                       });            
-                }        
-            });        
-            
-    
+
+                        });
+                }
+            });
+
+
         // GIPHY
-        $.ajax ({
+        $.ajax({
             url: "https://api.giphy.com/v1/gifs/search?api_key=PorPxXd5WaUPFvGd2oLlj4n8kI1EbG99&q=" + queryTitle + "&limit=5&offset=0&rating=g&lang=en",
-            method:"GET"
+            method: "GET"
         })
-            .done( function(response) {
+            .done(function (response) {
 
                 for (var i = 0; i < response.data.length; i++) {
 
-                var gifURL = $("<img>").attr("src", response.data[i].images.fixed_height.url).addClass("responsive-img");
+                    var gifURL = $("<img>").attr("src", response.data[i].images.fixed_height.url).addClass("responsive-img");
 
-                $("#sidebar").append(gifURL);
+                    $("#sidebar").append(gifURL);
 
                 }
 
             });
-    
-    
+
+
         // TasteDive
-        
-        $.ajax ({
+
+        $.ajax({
             url: "https://tastedive.com/api/similar?q=" + queryTitle + "&info=1&limit=4&k=400006-fanPagr-OP0T5H8C",
             method: "GET",
             dataType: "jsonp"
         })
-            .done( function(response) {
+            .done(function (response) {
 
                 var relatedContent = response.Similar.Results;
 
-                for (i=0;i<relatedContent.length;i++) {
+                for (i = 0; i < relatedContent.length; i++) {
                     var newRelated = $(`
 
-                <div class="card hoverable blue-grey darken-4">
+                <div class="card hoverable">
                     <div class="card-image waves-effect waves-block waves-light">
                       <div class="video-container">
                         <iframe class="activator" src="${relatedContent[i].yUrl}"></iframe>
@@ -128,13 +131,15 @@ $(document).ready( function () {
                 </div>
         
                     `);
-                    
+
                     $(".related").append(newRelated);
-                } 
+                }
 
             })
+
     };
     
+
     $(".cssClass").on("click", function (event) {
 
         event.preventDefault();
@@ -145,7 +150,7 @@ $(document).ready( function () {
 
     });
 
-    $("#saveButton").on("click", function(event) {
+    $("#saveButton").on("click", function (event) {
         event.preventDefault();
         var title = $(".media-title").text();
         var theme = $("#csstheme").attr("href");
@@ -184,5 +189,6 @@ $(document).ready( function () {
         $("#csstheme").attr("href", newTheme)
 
     })
+
 
 })    
