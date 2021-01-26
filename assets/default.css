@@ -26,7 +26,18 @@ nav {
     padding-left: 20px;
 }
 
-.actorPhoto{
+/* .actorPhoto{
     max-height: 25%;
     max-width: 100%;
+    float: left;
+} */
+
+#card-title {
+    color: white;
 }
+/* 
+@media (max-width: 480px) {
+    .actorPhoto {
+        max-width: 100%;
+    }
+} */
