@@ -65,10 +65,6 @@ $(document).ready(function () {
                         .done(function (response) {
 
                             var actorLink = $("<a>").attr("href", response[0].person.url);
-                            console.log(response);
-
-
-                            var actorLink = $("<a>").attr("href", response[0].person.url);
 
 
                             var newActorCards =
@@ -80,9 +76,6 @@ $(document).ready(function () {
                                         </div>  
                                         </div>
                                 `);
-
-                            $(".actors").append(actorLink.append(newActorCards).addClass("responsive-img"));
-
 
                             $(".actors").append(actorLink.append(newActorCards).addClass("responsive-img"));
 
