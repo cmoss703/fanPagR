@@ -17,7 +17,6 @@ aside
     color: white;
     box-shadow: 5px 5px 8px black;
     padding: 20px;
-    /* margin: 10px; */
 
 }
 
@@ -29,16 +28,3 @@ nav {
 .card {
     background-color: #ee6e73;
 }
-
-/* .actorPhoto{
-    max-height: 25%;
-    max-width: 100%;
-    float: left;
-} */
-
-/* 
-@media (max-width: 480px) {
-    .actorPhoto {
-        max-width: 100%;
-    }
-} */

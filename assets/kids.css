@@ -1,10 +1,8 @@
 /* kidstheme */
 
 body  {
-    /* background-color: #d7ccc8; */
+    background-color: #d7ccc8;
     background-image: url("../images/kidsBG.png");
-    /* background-size: cover; */
-    background-repeat: repeat;
 }
 
 section,
