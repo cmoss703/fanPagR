@@ -4,7 +4,7 @@
 header  {
     background-color: #212121;
     color: white;
-    /* font-family: 'Orbitron', sans-serif; */
+    font-family: 'Courier New', Courier, monospace;
     font-size: 40px;
     text-align: center;
     padding: 20px;
@@ -33,6 +33,14 @@ body  {
     background-image: url("../images/noirBG.png");
     /* background-size: cover; */
     background-repeat: repeat;
+}
+
+.card-title {
+    color: rgb(255, 255, 255);
+}
+
+#fanpagr-text {
+    color: white;
 }
 
 /* Landscape phones and portrait tablets */

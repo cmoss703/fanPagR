@@ -33,6 +33,24 @@ body  {
     background-repeat: repeat;
 }
 
+#search-text {
+    color: rgb(255, 211, 255);
+}
+
+#add-media {
+    color: black;
+    background-color: #f8bbd0;
+    border-width: 0;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+#fanpagr-text {
+    color: #fce4ec;
+}
+
 /* Landscape phones and portrait tablets */
 @media (max-width: 768px) {
 

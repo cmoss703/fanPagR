@@ -19,6 +19,7 @@ $(document).ready( function () {
         event.preventDefault();
         $(".media").html("");
         $("#searched").show();
+        $("#landing-page").hide();
 
         var queryTitle = $("#media-input").val().trim().split(" ").join("+");
         
@@ -50,14 +51,14 @@ $(document).ready( function () {
                         .done( function (response) {
 
                                 var newActorCards = (`
-                                <div class="card blue-grey darken-4">
+                                <div class="card blue-grey darken-4 col l3 s12">
                                 <div class="card-image">
                                     <img class="actorPhoto" src="${response[0].person.image["original"]}">
                                  </div>
-                                    <span class="card-title">${response[0].person.name}</span>
+                                    <div class="card-title">${response[0].person.name}</div>
                                 </div>        
                             `);
-                            $(".actors").append(newActorCards);
+                            $(".actors").append(newActorCards).addClass("responsive-img");
                                 
                        });            
                 }        

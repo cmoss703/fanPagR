@@ -17,17 +17,18 @@
 
     <!-- horror header font -->
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap" rel="stylesheet">
-    
-      <!-- kids header font -->
-  <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
-  
-  <!-- action header font -->
-  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 
-  <!-- comedy header font -->
-  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" id="csstheme" href="./assets/default.css" />
+    <!-- kids header font -->
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+    <!-- action header font -->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+    <!-- comedy header font -->
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fanpagr.css" />
+    <link rel="stylesheet" id="csstheme" href="./assets/default.css"/>
+
     <title>fanPagR</title>
 </head>
 
@@ -79,9 +80,9 @@
 
                 <li><a href="#">Home</a></li>
                 <li><a class="dropdown-trigger saved-titles" href="#!" data-target="dropdown2">Saved Titles<i
-                    class="material-icons right">arrow_drop_down</i></a></li>
+                            class="material-icons right">arrow_drop_down</i></a></li>
                 <li><a class="dropdown-trigger themes" href="#!" data-target="dropdown1">Themes<i
-                    class="material-icons right">arrow_drop_down</i></a></li>
+                            class="material-icons right">arrow_drop_down</i></a></li>
 
             </ul>
         </div>
@@ -89,22 +90,22 @@
     <ul class="sidenav" id="mobile-demo">
         <li><a href="#">Home</a></li>
         <li><a class="dropdown-trigger saved-titles" href="#!" data-target="dropdown4">Saved Titles<i
-            class="material-icons right">arrow_drop_down</i></a></li>
+                    class="material-icons right">arrow_drop_down</i></a></li>
         <li><a class="dropdown-trigger themes" href="#!" data-target="dropdown3">Themes<i
-            class="material-icons right">arrow_drop_down</i></a></li>
+                    class="material-icons right">arrow_drop_down</i></a></li>
     </ul>
 
     <div id="landing-page" class="container" style="display: block;">
-        <h1>fanPagR</h1>
+        <h1 id="fanpagr-text">fanPagR</h1>
         <form id="media-form">
-            <label for="media-input">Search for your favorite movie or TV show!</label>
+            <label for="media-input" id="search-text">Search for your favorite movie or TV show!</label>
             <input type="text" id="media-input">
             <br>
             <input id="add-media" type="submit" value="Search!">
         </form>
     </div>
 
-    <div id="searched" style="display: block;">
+    <div id="searched" style="display: none;">
         <div class="container">
             <div class="row">
                 <header class="center"><span class="media-title"></span><span class="media-year"></span></header>
@@ -115,10 +116,12 @@
                     <section class="row">
                         <div class="media synopsis"></div>
                     </section>
-                    <section class="row"><h4>Actors</h4>
+                    <section class="row">
+                        <h4>Actors</h4>
                         <div class="media actors"></div>
                     </section>
-                    <section class="row"><h4>Related Content</h4>
+                    <section class="row">
+                        <h4>Related Content</h4>
                         <div class="media related"></div>
                     </section>
 
@@ -130,12 +133,13 @@
 
         <div class="fixed-action-btn">
             <a class="btn-floating btn-large red">
-              <i class="large material-icons">mode_edit</i>
+                <i class="large material-icons">mode_edit</i>
             </a>
             <ul>
-              <li><a class="btn-floating green" id="saveButton" title="Save this fan page!"><i class="material-icons">publish</i></a></li>
+                <li><a class="btn-floating green" id="saveButton" title="Save this fan page!"><i
+                            class="material-icons">publish</i></a></li>
             </ul>
-          </div>
+        </div>
     </div>
 
 

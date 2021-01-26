@@ -3,8 +3,8 @@
 body  {
     background-color: #b3e5fc;
     background-image: url("../images/comedyBG.png");
-    /* background-size: cover; */
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 section,
