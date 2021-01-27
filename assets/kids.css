@@ -17,7 +17,7 @@ header  {
     font-family: 'Do Hyeon', sans-serif;
 }
 
-h4 {
+h4, h5 {
     color: white;
     font-family: 'Do Hyeon', sans-serif;
 }
@@ -32,4 +32,12 @@ nav {
 
 .synopsis {
     color: white;
+}
+
+#add-media {
+    background-color: #12a075;
+    }
+
+#footer {
+    background-color: #ff5722;
 }

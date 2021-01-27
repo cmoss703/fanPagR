@@ -91,10 +91,14 @@ $(document).ready(function () {
 
         // GIPHY
         $.ajax({
-            url: "https://api.giphy.com/v1/gifs/search?api_key=PorPxXd5WaUPFvGd2oLlj4n8kI1EbG99&q=" + queryTitle + "&limit=5&offset=0&rating=g&lang=en",
+            url: "https://api.giphy.com/v1/gifs/search?api_key=PorPxXd5WaUPFvGd2oLlj4n8kI1EbG99&q=" + queryTitle + "&limit=15&offset=0&rating=g&lang=en",
             method: "GET"
         })
             .done(function (response) {
+
+                var gifHeader = $("<h5>").text("GIFs from this title").addClass("gif-header");
+
+                $("#sidebar").append(gifHeader);
 
                 for (var i = 0; i < response.data.length; i++) {
 
@@ -188,15 +192,7 @@ $(document).ready(function () {
 
         var title = $(this).text();
 
-        queryTitle = $(this).text().trim().split(" ").join("+");
-
-        addMedia(queryTitle);
-
-        var titleObject = localStorage.getItem(title);
-
-        var newTheme = JSON.parse(titleObject).theme;
-
-        $("#csstheme").attr("href", newTheme)
+        dropdownTheme(title);
 
     });
 
@@ -206,7 +202,13 @@ $(document).ready(function () {
 
         var title = $(this).text();
 
-        queryTitle = $(this).text().trim().split(" ").join("+");
+        dropdownTheme(title);
+
+    });
+
+    function dropdownTheme(title) {
+
+        queryTitle = title.trim().split(" ").join("+");
 
         addMedia(queryTitle);
 
@@ -215,9 +217,7 @@ $(document).ready(function () {
         var newTheme = JSON.parse(titleObject).theme;
 
         $("#csstheme").attr("href", newTheme)
-
-    });
-
+    }
 
     $(".modal-close").on("click", function() {
         location.reload();

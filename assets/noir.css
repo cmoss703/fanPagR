@@ -7,7 +7,7 @@ header  {
     font-family: 'Courier New', Courier, monospace;
 }
 
-h4 {
+h4, h5 {
     color: white;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -34,5 +34,18 @@ body  {
 
 #fanpagr-text {
     color: white;
+}
+
+#add-media {
+    background-color: #ffffff;
+    color: black;
+    }
+
+.hint {
+    color: white;
+}
+
+#footer {
+    background-color: #212121;
 }
 

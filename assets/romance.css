@@ -11,6 +11,11 @@ h4 {
     font-family: 'Great Vibes', cursive;
 }
 
+h5 {
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
 section,
 aside
 {
@@ -36,16 +41,13 @@ body  {
 }
 
 #add-media {
-    color: black;
-    background-color: #f8bbd0;
-    border-width: 0;
-    text-align: center;
-    display: inline-block;
-    border-radius: 50%;
-    padding: 5px;
+background-color: #ad1457;
 }
 
 #fanpagr-text {
     color: #fce4ec;
 }
 
+#footer {
+    background-color: #ad1457;
+}
