@@ -22,7 +22,7 @@ header  {
     font-family: 'IM Fell DW Pica SC', serif;
 }
 
-h4 {
+h4, h5 {
     color: white;
     font-family: 'IM Fell DW Pica SC', serif;
 }
@@ -37,4 +37,13 @@ nav {
 
 .synopsis {
     color: white;
+}
+
+#add-media {
+    background-color: #fdeeae;
+    color: black;
+    }
+
+#footer {
+    background-color: #37474f;
 }

@@ -30,130 +30,137 @@
     <!-- Fontawesome Kit -->
     <script src="https://kit.fontawesome.com/43242b94b9.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" id="csstheme" href="./assets/default.css" />
     <link rel="stylesheet" href="./assets/fanpagr.css" />
-    
+    <link rel="stylesheet" id="csstheme" href="./assets/default.css" />
+
     <title>fanPagR</title>
+    <link rel="icon" href="./images/fav-icon.png">
 </head>
 
 <body>
-    <!-- <nav>
-        <div class="nav-wrapper">
-            <a href="#!" class="brand-logo center">fanPagR</a>
-            <ul class="left hide-on-med-and-down">
-                <li><a href="sass.html">Page Themes</a></li>
-                <li><a href="badges.html">Saved Titles</a></li>
-                <li class="active"><a href="collapsible.html">Home</a></li>
+
+    <div id="page-container">
+        <div id="content-wrap">
+
+            <!-- Dropdown Structure -->
+            <ul id="dropdown1" class="dropdown-content">
+                <li id="sciFi" class="cssClass"><a href="#!">Sci-Fi</a></li>
+                <li id="romance" class="cssClass"><a href="#!">Romance</a></li>
+                <!-- <li class="divider"></li> -->
+                <li id="noir" class="cssClass"><a href="#!">Noir</a></li>
+                <li id="default" class="cssClass"><a href="#!">Default</a></li>
+                <li id="action" class="cssClass"><a href="#!">Action</a></li>
+                <li id="horror" class="cssClass"><a href="#!">Horror</a></li>
+                <li id="kids" class="cssClass"><a href="#!">Kids</a></li>
+                <li id="comedy" class="cssClass"><a href="#!">Comedy</a></li>
             </ul>
-        </div>
-    </nav> -->
-    <!-- Dropdown Structure -->
-    <ul id="dropdown1" class="dropdown-content">
-        <li id="sciFi" class="cssClass"><a href="#!">Sci-Fi</a></li>
-        <li id="romance" class="cssClass"><a href="#!">Romance</a></li>
-        <!-- <li class="divider"></li> -->
-        <li id="noir" class="cssClass"><a href="#!">Noir</a></li>
-        <li id="default" class="cssClass"><a href="#!">Default</a></li>
-        <li id="action" class="cssClass"><a href="#!">Action</a></li>
-        <li id="horror" class="cssClass"><a href="#!">Horror</a></li>
-        <li id="kids" class="cssClass"><a href="#!">Kids</a></li>
-        <li id="comedy" class="cssClass"><a href="#!">Comedy</a></li>
-    </ul>
-    <ul id="dropdown2" class="dropdown-content">
-    </ul>
-    <ul id="dropdown3" class="dropdown-content">
-        <li id="sciFi" class="cssClass"><a href="#!">Sci-Fi</a></li>
-        <li id="romance" class="cssClass"><a href="#!">Romance</a></li>
-        <!-- <li class="divider"></li> -->
-        <li id="noir" class="cssClass"><a href="#!">Noir</a></li>
-        <li id="default" class="cssClass"><a href="#!">Default</a></li>
-        <li id="action" class="cssClass"><a href="#!">Action</a></li>
-        <li id="horror" class="cssClass"><a href="#!">Horror</a></li>
-        <li id="kids" class="cssClass"><a href="#!">Kids</a></li>
-        <li id="comedy" class="cssClass"><a href="#!">Comedy</a></li>
-    </ul>
-    <ul id="dropdown4" class="dropdown-content">
-    </ul>
-
-    <div id="modal" class="modal">
-        <div class="modal-content">
-          <h4>Whoops!</h4>
-          <p>It looks like that movie or TV show didn't return any content. Try again!</p>
-        </div>
-        <div class="modal-footer">
-          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
-        </div>
-    </div>
-
-    <nav>
-        <div class="nav-wrapper">
-
-            <a href="#!" class="brand-logo newSearch">fanPagR</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-
-                <li><a href="#" class="newSearch">New Search</a></li>
-                <li><a class="dropdown-trigger saved-titles" href="#!" data-target="dropdown2">Saved Titles<i
-                            class="material-icons right">arrow_drop_down</i></a></li>
-                <li><a class="dropdown-trigger themes" href="#!" data-target="dropdown1">Themes<i
-                            class="material-icons right">arrow_drop_down</i></a></li>
-
+            <ul id="dropdown2" class="dropdown-content">
             </ul>
-        </div>
-    </nav>
-    <ul class="sidenav" id="mobile-demo">
-        <li><a href="#" class="newSearch">New Search</a></li>
-        <li><a class="dropdown-trigger saved-titles" href="#!" data-target="dropdown4">Saved Titles<i
-                    class="material-icons right">arrow_drop_down</i></a></li>
-        <li><a class="dropdown-trigger themes" href="#!" data-target="dropdown3">Themes<i
-                    class="material-icons right">arrow_drop_down</i></a></li>
-    </ul>
+            <ul id="dropdown3" class="dropdown-content">
+                <li id="sciFi" class="cssClass"><a href="#!">Sci-Fi</a></li>
+                <li id="romance" class="cssClass"><a href="#!">Romance</a></li>
+                <!-- <li class="divider"></li> -->
+                <li id="noir" class="cssClass"><a href="#!">Noir</a></li>
+                <li id="default" class="cssClass"><a href="#!">Default</a></li>
+                <li id="action" class="cssClass"><a href="#!">Action</a></li>
+                <li id="horror" class="cssClass"><a href="#!">Horror</a></li>
+                <li id="kids" class="cssClass"><a href="#!">Kids</a></li>
+                <li id="comedy" class="cssClass"><a href="#!">Comedy</a></li>
+            </ul>
+            <ul id="dropdown4" class="dropdown-content">
+            </ul>
 
-    <div id="landing-page" class="container" style="display: block;">
-        <h1 id="fanpagr-text">fanPagR</h1>
-        <form id="media-form">
-            <label for="media-input" id="search-text">Search for your favorite movie or TV show!</label>
-            <input type="text" id="media-input">
-            <br>
-            <input id="add-media" type="submit" value="Search!">
-        </form>
-        <p>(Hint: Want to change the look of your fan page? Try our "Themes" in the top right corner!)</p>
-    </div>
-
-    <div id="searched" style="display: none;">
-        <div class="container">
-            <div class="row">
-                <header class="center"><span class="media-title"></span><span class="media-year"></span></header>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <h4>Whoops!</h4>
+                    <p>It looks like that movie or TV show didn't return any content. Try again!</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+                </div>
             </div>
-            <div class="row">
-                <div class="col s12 m8 media-stuff">
 
-                    <section class="row">
-                        <div class="media synopsis"></div>
-                    </section>
-                    <section class="row">
-                        <h4>Actors</h4>
-                        <div class="media actors"></div>
-                    </section>
-                    <section class="row">
-                        <h4>Related Content</h4>
-                        <div class="media related"></div>
-                    </section>
+            <nav>
+                <div class="nav-wrapper">
+
+                    <a href="#!" class="brand-logo newSearch">fanPagR</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+
+                        <li><a href="#" class="newSearch">New Search</a></li>
+                        <li><a class="dropdown-trigger saved-titles" href="#!" data-target="dropdown2">Saved Titles<i
+                                    class="material-icons right">arrow_drop_down</i></a></li>
+                        <li><a class="dropdown-trigger themes" href="#!" data-target="dropdown1">Themes<i
+                                    class="material-icons right">arrow_drop_down</i></a></li>
+
+                    </ul>
+                </div>
+            </nav>
+            <ul class="sidenav" id="mobile-demo">
+                <li><a href="#" class="newSearch">New Search</a></li>
+                <li><a class="dropdown-trigger saved-titles" href="#!" data-target="dropdown4">Saved Titles<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="dropdown-trigger themes" href="#!" data-target="dropdown3">Themes<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+
+            <div id="landing-page" class="container landing-box" style="display: block;">
+                <h1 id="fanpagr-text">fanPagR</h1>
+                <form id="media-form">
+                    <label for="media-input" id="search-text">Search for your favorite movie or TV show!</label>
+                    <input type="text" id="media-input">
+                    <br>
+                    <input id="add-media" type="submit" value="Search!">
+                </form>
+                <p class="hint">(Hint: Want to change the look of your fan page? Try our "Themes" in the top right
+                    corner!)</p>
+            </div>
+
+            <div id="searched" style="display: none;">
+                <div class="container">
+                    <div class="row">
+                        <header class="center"><span class="media-title"></span><span class="media-year"></span>
+                        </header>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m8 media-stuff">
+
+                            <section class="row">
+                                <div class="media synopsis"></div>
+                            </section>
+                            <section class="row">
+                                <h4>Actors</h4>
+                                <div class="media actors"></div>
+                            </section>
+                            <section class="row">
+                                <h4>Related Content</h4>
+                                <div class="media related"></div>
+                            </section>
+
+                        </div>
+                        <aside class="col s12 m3 offset-m1 media center-align" id="sidebar"></aside>
+                    </div>
 
                 </div>
-                <aside class="col s12 m3 offset-m1 media center-align" id="sidebar"></aside>
+
+                <div class="fixed-action-btn">
+                    <a class="btn-floating btn-large red">
+                        save
+                    </a>
+                    <ul>
+                        <li><a class="btn-floating green" id="saveButton" title="Save this fan page!"><i
+                                    class="far fa-save"></i></a></li>
+                    </ul>
+                </div>
             </div>
-
         </div>
 
-        <div class="fixed-action-btn">
-            <a class="btn-floating btn-large red">
-                save
-            </a>
-            <ul>
-                <li><a class="btn-floating green" id="saveButton" title="Save this fan page!"><i class="far fa-save"></i></a></li>
-            </ul>
-        </div>
+        <footer id="footer">
+            Made by Ian, Liz, and Christina<br>
+            <a href="https://github.com/cmoss703/fanPagR" title="Go to the github repo of this site" target="_blank">Click here to visit the Github Repo</a>
+            
+        </footer>
+
     </div>
 
 
