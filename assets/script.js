@@ -5,10 +5,13 @@
 
 
 $(document).ready(function () {
+
     // Materialize method to auto-init all JavaScript functionality
     M.AutoInit();
 
     savetoNav();
+
+    $("#searched").hide();
 
     function savetoNav() {
     
@@ -16,8 +19,6 @@ $(document).ready(function () {
         $("#dropdown2").append(`<li><a href="#!" class="savedTitle">${localStorage.key(i)}</a></li>`);
         $("#dropdown4").append(`<li><a href="#!" class="savedTitle">${localStorage.key(i)}</a></li>`)
     }};
-
-    $("#searched").hide();
 
     var queryTitle;
 
@@ -41,10 +42,13 @@ $(document).ready(function () {
         $.ajax({
             url: "https://www.omdbapi.com/?t=" + queryTitle + "&plot=full&apikey=1d96ca81",
             method: "GET",
-            dataType: "jsonp"
         })
             .done(function (response) {
-
+                console.log(response);
+                if (response["Response"] === "False") {
+                    $("#modal").modal('open');
+                }
+                
                 var imagePoster = $("<img>").attr("src", response.Poster).attr("class", "responsive-img");
                 genre = response.Genre;
                 actors = response.Actors.split(",");
@@ -64,12 +68,12 @@ $(document).ready(function () {
                     })
                         .done(function (response) {
 
-                            var actorLink = $("<a>").attr("href", response[0].person.url);
+                            var actorLink = $("<a>").attr("href", response[0].person.url).attr("title", "Go to this actor's TVMaze profile");
 
 
                             var newActorCards =
                                     (`
-                                    <div class="card col l6 s12">
+                                    <div class="card hoverable col l6 s12">
                                     <div class="card-image">
                                         <img class="actorPhoto" src="${response[0].person.image["original"]}">
                                         <span class="card-title white-text">${response[0].person.name}</span>
@@ -176,7 +180,7 @@ $(document).ready(function () {
 
         addMedia(queryTitle);
         
-    })
+    });
     
     $("#dropdown2").on("click", "li", function (event) {
 
@@ -194,6 +198,10 @@ $(document).ready(function () {
 
         $("#csstheme").attr("href", newTheme)
 
+    });
+
+    $(".modal-close").on("click", function() {
+        location.reload();
     })
 
 

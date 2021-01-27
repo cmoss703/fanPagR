@@ -1,9 +1,13 @@
-.actorPhoto {
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
+.actorPhoto {
     width:  100px;
     height: 300px;
     object-fit: cover;
-
 }
 
 .card-title {
