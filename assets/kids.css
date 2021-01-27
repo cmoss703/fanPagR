@@ -9,20 +9,12 @@ section,
 aside  
 {
     background-color: #9575cd;
-    box-shadow: 5px 5px 8px black;
-    padding: 20px;
-
 }
 
 header  {
     background-color: #4527a0;
     color: white;
     font-family: 'Do Hyeon', sans-serif;
-    font-size: 40px;
-    text-align: center;
-    padding: 20px;
-    margin-top: 10px;
-
 }
 
 h4 {
@@ -32,28 +24,9 @@ h4 {
 
 nav {
     background-color: #ff5722  ;
-    padding-left: 20px;
-
 }
 
 .card {
     background-color: #4527a0;
 }
 
-/* Landscape phones and portrait tablets */
-@media (max-width: 768px) {
-
-    body {
-  background-image: none;
-}
-
-}
-
-/* Portrait phones and smaller */
-@media (max-width: 480px) {
-
-    body {
-  background-image: none;
-}
-
-}

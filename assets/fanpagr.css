@@ -10,7 +10,48 @@ body {
     object-fit: cover;
 }
 
-.card-title {
+.titleBar {
     opacity: 0.5;
     background-color: black;
 }
+
+section,
+aside  
+{
+    box-shadow: 5px 5px 8px black;
+    padding: 20px;
+
+}
+
+header  {
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+
+}
+
+nav {
+    padding-left: 20px;
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 768px) {
+
+    body {
+  background-image: none;
+}
+
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+    body {
+  background-image: none;
+}
+
+}
+
+

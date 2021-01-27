@@ -9,9 +9,6 @@ section,
 aside  
 {
     background-color: #455a64;
-    box-shadow: 5px 5px 8px black;
-    padding: 20px;
-
 }
 
 h4 {
@@ -23,11 +20,6 @@ header  {
     background-color: #37474f ;
     color: white;
     font-family: 'IM Fell DW Pica SC', serif;
-    font-size: 40px;
-    text-align: center;
-    padding: 20px;
-    margin-top: 10px;
-
 }
 
 h4 {
@@ -37,28 +29,9 @@ h4 {
 
 nav {
     background-color: #37474f;
-    padding-left: 20px;
-
 }
 
 .card {
     background-color: #37474f ;
 }
 
-/* Landscape phones and portrait tablets */
-@media (max-width: 768px) {
-
-    body {
-  background-image: none;
-}
-
-}
-
-/* Portrait phones and smaller */
-@media (max-width: 480px) {
-
-    body {
-  background-image: none;
-}
-
-}
