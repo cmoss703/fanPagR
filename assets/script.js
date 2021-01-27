@@ -68,7 +68,7 @@ $(document).ready(function () {
                     })
                         .done(function (response) {
 
-                            var actorLink = $("<a>").attr("href", response[0].person.url).attr("title", "Go to this actor's TVMaze profile");
+                            var actorLink = $("<a>").attr("href", response[0].person.url).attr("title", "Go to this actor's TVMaze profile").attr("target", "_blank");
 
 
                             var newActorCards =
@@ -76,7 +76,7 @@ $(document).ready(function () {
                                     <div class="card hoverable col l6 s12">
                                     <div class="card-image">
                                         <img class="actorPhoto" src="${response[0].person.image["original"]}">
-                                        <span class="card-title white-text">${response[0].person.name}</span>
+                                        <span class="card-title titleBar white-text">${response[0].person.name}</span>
                                         </div>  
                                         </div>
                                 `);
@@ -132,7 +132,7 @@ $(document).ready(function () {
                       <p><a href="${relatedContent[i].wUrl}" target="_blank">Go to Wikipedia for more info</a></p>
                     </div>
                     <div class="card-reveal">
-                      <span class="card-title white-text">${relatedContent[i].Name}<i class="material-icons right">close</i></span>
+                      <span class="card-title titleBar white-text">${relatedContent[i].Name}<i class="material-icons right">close</i></span>
                       <p class="grey-text">${relatedContent[i].wTeaser}</p>
                     </div>
                 </div>
@@ -199,6 +199,25 @@ $(document).ready(function () {
         $("#csstheme").attr("href", newTheme)
 
     });
+
+    $("#dropdown4").on("click", "li", function (event) {
+
+        event.preventDefault();
+
+        var title = $(this).text();
+
+        queryTitle = $(this).text().trim().split(" ").join("+");
+
+        addMedia(queryTitle);
+
+        var titleObject = localStorage.getItem(title);
+
+        var newTheme = JSON.parse(titleObject).theme;
+
+        $("#csstheme").attr("href", newTheme)
+
+    });
+
 
     $(".modal-close").on("click", function() {
         location.reload();

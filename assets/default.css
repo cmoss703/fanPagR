@@ -4,10 +4,6 @@
 header  {
     background-color: #ee6e73;
     color: white;
-    font-size: 40px;
-    text-align: center;
-    padding: 20px;
-    margin-top: 10px;
 }
 
 section,
@@ -15,16 +11,12 @@ aside
 {
     background-color: #ee6e73;
     color: white;
-    box-shadow: 5px 5px 8px black;
-    padding: 20px;
-
 }
 
 nav {
     background-color: #ee6e73;
-    padding-left: 20px;
 }
 
 .card {
-    background-color: #ee6e73;
+    background-color: #ef9a9a;
 }

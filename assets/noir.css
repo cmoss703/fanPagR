@@ -5,11 +5,6 @@ header  {
     background-color: #212121;
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 40px;
-    text-align: center;
-    padding: 20px;
-    margin-top: 10px;
-
 }
 
 h4 {
@@ -22,15 +17,10 @@ aside
 {
     background-color: #9e9e9e;
     color: black;
-    box-shadow: 5px 5px 8px black;
-    padding: 20px;
-
 }
 
 nav {
     background-color: #212121;
-    padding-left: 20px;
-
 }
 
 body  {
@@ -46,20 +36,3 @@ body  {
     color: white;
 }
 
-/* Landscape phones and portrait tablets */
-@media (max-width: 768px) {
-
-    body {
-  background-image: none;
-}
-
-}
-
-/* Portrait phones and smaller */
-@media (max-width: 480px) {
-
-    body {
-  background-image: none;
-}
-
-}

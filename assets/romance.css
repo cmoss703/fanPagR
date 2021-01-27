@@ -4,10 +4,6 @@ header  {
     background-color: #ad1457;
     color: white;
     font-family: 'Great Vibes', cursive;
-    font-size: 40px;
-    text-align: center;
-    padding: 20px;
-    margin-top: 10px;
 }
 
 h4 {
@@ -20,14 +16,10 @@ aside
 {
     background-color: #f8bbd0;
     color: black;
-    box-shadow: 5px 5px 8px black;
-    padding: 20px;
 }
 
 nav {
     background-color: #ad1457;
-    padding-left: 20px;
-
 }
 
 body  {
@@ -55,23 +47,5 @@ body  {
 
 #fanpagr-text {
     color: #fce4ec;
-}
-
-/* Landscape phones and portrait tablets */
-@media (max-width: 768px) {
-
-    body {
-  background-image: none;
-}
-
-}
-
-/* Portrait phones and smaller */
-@media (max-width: 480px) {
-
-    body {
-  background-image: none;
-}
-
 }
 
