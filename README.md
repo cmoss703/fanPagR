@@ -6,19 +6,19 @@ We're all a fan of something. In this age, and especially in the last year, medi
 
 fanPagr allows the user to search for their favorite movie or TV show, and recieve a bunch of information about that title. 
 
-![Landing Page](images/main-page.png)
+![Landing Page](assets/screenshots/landing-page-desktop.png)
 
 Can't get enough of Westworld? Search for it on fanPagr! You'll be provided with the synopsis, GIFs from the show, trailers for related titles you may also like, and photos of the actors, which are clickable links to their OMDB pages where you can find other content they star in!
 
-![WestWorld](images/westworld.png)
+![WestWorld](assets/screenshots/westworld.png)
 
 That's not all, though! fanPagr allows the user to create their own experience. You're not stuck with our default colors! We wouldn't do that to you. In the dropdown bar under "Themes", you'll find a variety of different genres that correspond to different page themes. Click on "Romance" and your page is transformed into a pretty pink layout featuring all your favorite content from that rom-com you love so much. Click on Noir and you're transported to a black-and-white mystery vibe. 
 
-![Pretty in Pink](images/screenshots/pretty-in-pink.png)
+![Pretty in Pink](assets/screenshots/pretty-in-pink.png)
 
 Need to go back and reference your page again? (Of course you do!) You can saved the title with the theme of your choice, and find it in the dropdown menu the next time you visit the page!
 
-![Saved Titles](images/screenshots/saved-dropdown.png)
+![Saved Titles](assets/screenshots/saved-dropdown.png)
 
 We're mobile friendly, too! The functionality is the same, but the navigation bar incorporates a hamburger icon that when touched, will show you the same saved and theme content as the desktop page. Same easy functionality!
 
@@ -35,11 +35,15 @@ How did we generate this app? What functions did we use, and what was the though
 
 We incorporated a good balance of html, css, and javascript in the project.
 
-The html file covers the bones of the site. This is where the navigation bar layout, dropdown items for themes, the homepage features, the footer, etc. live.
+The html file covers the bones of the site. This is where the navigation bar layout, dropdown items for themes, the homepage features, the footer, etc. live. 
 
-Almost all of the searched content was created dynamically in Javascript, using jQuery. Everything that happens after you click the search button is made in the javascript file. 
+CSS was utilized a fair amount as well, since we have so many different themes. We utilized Materialize (see link below) for some basic css features, such as the grid and the navigation bar, but the themes were styled manually using colors and background images.
 
-CSS was utilized a fair amount as well, since we have so many different themes. 
+Almost all of the searched content was created dynamically in Javascript, using jQuery. Everything that happens after you click the search button is made in the javascript file. We have a total of four different AJAX calls for different websites. The sites we are pulling from are listed below in the 'CONTENT' section. Elements are pulled from these calls and either displayed on the page, or used for a different call or function. 
+
+    There is a floating save button on the bottom right corner of the page, which when clicked, will save both the title and the theme css link as an object in local storage. The dropdown menu for "Saved Titles" will store this title. When you revisit 
+
+
 
 ## CONTENT UTILIZED
 
