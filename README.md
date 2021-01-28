@@ -25,8 +25,9 @@ We're mobile friendly, too! The functionality is the same, but the navigation ba
 ![Pretty in Pink](images/screenshots/mobile.png)
 
 It's hard to deny that this is the hottest new way to find all the content on your favorite titles. Give it a try!
-
+<figure class="video_container">
 <iframe src="https://drive.google.com/file/d/1D5QlpQw00Nbb_byOF_6wYVYCz0M-zVIe/preview" width="640" height="480"></iframe>
+</figure>
 
 ## CODE STUFF
 
