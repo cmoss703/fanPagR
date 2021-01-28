@@ -26,7 +26,7 @@ We're mobile friendly, too! The functionality is the same, but the navigation ba
 
 It's hard to deny that this is the hottest new way to find all the content on your favorite titles. Give it a try!
 
-<iframe src="https://drive.google.com/file/d/1D5QlpQw00Nbb_byOF_6wYVYCz0M-zVIe/preview" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1D5QlpQw00Nbb_byOF_6wYVYCz0M-zVIe/preview" width=100%></iframe>
 
 ## CODE STUFF
 
@@ -36,7 +36,7 @@ We incorporated a good balance of html, css, and javascript in the project.
 
 The html file covers the bones of the site. This is where the navigation bar layout, dropdown items for themes, the homepage features, the footer, etc. live.
 
-Almost all of the searched content was created dynamically in Javascript, using jQuery. Everything that happens after you click the search button is made in the javascript file. 
+Almost all of the searched content was created dynamically in Javascript, using jQuery. Everything that happens after you click the search button is made in the javascript file. AJAX functions 
 
 CSS was utilized a fair amount as well, since we have so many different themes. 
 
