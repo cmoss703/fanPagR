@@ -6,7 +6,7 @@ We're all a fan of something. In this age, and especially in the last year, medi
 
 fanPagr allows the user to search for their favorite movie or TV show, and recieve a bunch of information about that title. 
 
-![Landing Page](assets/screenshots/landing-page-desktop.png)
+![Landing Page](assets/screenshots/landing-page-desktop1.png)
 
 ![Modal Functionality](assets/screenshots/bad-user-input.png)
 
