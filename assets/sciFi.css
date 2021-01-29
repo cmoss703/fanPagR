@@ -5,10 +5,8 @@ body  {
     background-image: url("../images/sciFiBG.png");
 }
 
-section,
-aside  
-{
-    background-color: #a1887f;
+nav {
+    background-color: #4e342e;
 }
 
 header  {
@@ -17,13 +15,15 @@ header  {
     font-family: 'Orbitron', sans-serif;
 }
 
+section,
+aside  
+{
+    background-color: #a1887f;
+}
+
 h4, h5 {
     color: rgba(143, 248, 143, 0.925);
     font-family: 'Orbitron', sans-serif;
-}
-
-nav {
-    background-color: #4e342e;
 }
 
 .card {

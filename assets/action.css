@@ -5,6 +5,16 @@ body  {
     background-image: url("../images/actionBG.png");
 }
 
+nav {
+    background-color: #d50000 ;
+}
+
+header  {
+    background-color: #d50000;
+    color: white;
+    font-family: 'Russo One', sans-serif;    
+}
+
 section,
 aside  
 {
@@ -17,32 +27,22 @@ h4, h5 {
     font-family: 'Russo One', sans-serif; 
 }
 
-header  {
-    background-color: #d50000;
-    color: white;
-    font-family: 'Russo One', sans-serif;    
-}
-
 h4 {
     color: white;
     font-family: 'Russo One', sans-serif; 
-}
-
-nav {
-    background-color: #d50000 ;
 }
 
 .card {
     background-color: #212121;
 }
 
-#add-media {
-    background-color: #d50000;
-    }
-
 .hint, #fanpagr-text {
     color: white;
 }
+
+#add-media {
+    background-color: #d50000;
+    }
 
 #footer {
     background-color: #d50000;

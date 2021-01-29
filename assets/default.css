@@ -6,6 +6,10 @@ header  {
     color: white;
 }
 
+nav {
+    background-color: #ee6e73;
+}
+
 section,
 aside
 {
@@ -13,14 +17,11 @@ aside
     color: white;
 }
 
-nav {
-    background-color: #ee6e73;
+a {
+    color: #01579b;
 }
 
 .card {
     background-color: #ef9a9a;
 }
 
-a {
-    color: #01579b;
-}

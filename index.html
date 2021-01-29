@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- materialize css for grid framework and mobile responsiveness -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap" rel="stylesheet">
+
     <!-- font-family: 'Proza Libre', sans-serif; -->
+    <link href="https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap" rel="stylesheet">
+   
     <!-- romance header font-->
     <link href='https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap' rel='stylesheet'>
 
@@ -30,7 +34,10 @@
     <!-- Fontawesome Kit -->
     <script src="https://kit.fontawesome.com/43242b94b9.js" crossorigin="anonymous"></script>
 
+    <!-- Base css file with  cross-theme styling -->
     <link rel="stylesheet" href="./assets/fanpagr.css" />
+
+    <!-- theme css pages - dynamically changed based on theme chosen by user-->
     <link rel="stylesheet" id="csstheme" href="./assets/default.css" />
 
     <title>fanPagR</title>
@@ -43,33 +50,42 @@
         <div id="content-wrap">
 
             <!-- Dropdown Structure -->
+            <!-- Theme chooser on desktop -->
             <ul id="dropdown1" class="dropdown-content">
                 <li id="sciFi" class="cssClass"><a href="#!">Sci-Fi</a></li>
                 <li id="romance" class="cssClass"><a href="#!">Romance</a></li>
-                <!-- <li class="divider"></li> -->
                 <li id="noir" class="cssClass"><a href="#!">Noir</a></li>
-                <li id="default" class="cssClass"><a href="#!">Default</a></li>
                 <li id="action" class="cssClass"><a href="#!">Action</a></li>
                 <li id="horror" class="cssClass"><a href="#!">Horror</a></li>
                 <li id="kids" class="cssClass"><a href="#!">Kids</a></li>
                 <li id="comedy" class="cssClass"><a href="#!">Comedy</a></li>
+                <li id="default" class="cssClass"><a href="#!">Default</a></li>
             </ul>
+
+            <!-- saved titles dropdown for desktop -->
+
             <ul id="dropdown2" class="dropdown-content">
             </ul>
+
+            <!-- Theme chooser for Mobile -->
+
             <ul id="dropdown3" class="dropdown-content">
                 <li id="sciFi" class="cssClass"><a href="#!">Sci-Fi</a></li>
                 <li id="romance" class="cssClass"><a href="#!">Romance</a></li>
-                <!-- <li class="divider"></li> -->
                 <li id="noir" class="cssClass"><a href="#!">Noir</a></li>
-                <li id="default" class="cssClass"><a href="#!">Default</a></li>
                 <li id="action" class="cssClass"><a href="#!">Action</a></li>
                 <li id="horror" class="cssClass"><a href="#!">Horror</a></li>
                 <li id="kids" class="cssClass"><a href="#!">Kids</a></li>
                 <li id="comedy" class="cssClass"><a href="#!">Comedy</a></li>
+                <li id="default" class="cssClass"><a href="#!">Default</a></li>
             </ul>
+
+            <!-- saved titles dropdown for Mobile -->
+
             <ul id="dropdown4" class="dropdown-content">
             </ul>
 
+            <!-- error message if API return is invalid -->
             <div id="modal" class="modal">
                 <div class="modal-content">
                     <h4>Whoops!</h4>
@@ -80,6 +96,7 @@
                 </div>
             </div>
 
+            <!-- desktop navbar -->
             <nav>
                 <div class="nav-wrapper">
 
@@ -95,6 +112,8 @@
 
                     </ul>
                 </div>
+
+                <!-- mobile navbar-->
             </nav>
             <ul class="sidenav" id="mobile-demo">
                 <li><a href="#" class="newSearch">New Search</a></li>
@@ -104,6 +123,7 @@
                             class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
 
+            <!-- landing page / search area - shows initially, is hidden once results are returned and the fan page is generated -->
             <div id="landing-page" class="container landing-box" style="display: block;">
                 <h1 id="fanpagr-text">fanPagR</h1>
                 <form id="media-form">
@@ -116,9 +136,11 @@
                     corner!)</p>
             </div>
 
+            <!-- Customized Fan Page -  Hidden initially, only shows once search button is pressed -->
             <div id="searched" style="display: none;">
                 <div class="container">
                     <div class="row">
+                        <!-- header with custom text depending on the theme -->
                         <header class="center"><span class="media-title"></span><span class="media-year"></span>
                         </header>
                     </div>
@@ -126,24 +148,29 @@
                         <div class="col s12 m8 media-stuff">
 
                             <section class="row">
+                                <!-- plot synopsis  of searched title -->
                                 <div class="media synopsis"></div>
                             </section>
                             <section class="row">
+                                <!--- Actors with dynamically generated links to their profiles -->
                                 <h4>Actors</h4>
                                 <div class="media actors"></div>
                             </section>
                             <section class="row">
+                                <!-- YouTube videos of related content -->
                                 <h4>Related Content</h4>
                                 <div class="media related"></div>
                             </section>
 
                         </div>
+                        <!-- movie/show poster & gifs from the searched title -->
                         <aside class="col s12 m3 offset-m1 media center-align" id="sidebar"></aside>
                     </div>
 
                 </div>
 
                 <div class="fixed-action-btn">
+                    <!-- save button to store selected titles/themes in local storage -->
                     <a class="btn-floating btn-large red">
                         save
                     </a>
@@ -154,11 +181,12 @@
                 </div>
             </div>
         </div>
-
+        <!-- this is us! -->
         <footer id="footer">
             Made by Ian, Liz, and Christina<br>
-            <a href="https://github.com/cmoss703/fanPagR" title="Go to the github repo of this site" target="_blank">Click here to visit the Github Repo</a>
-            
+            <a href="https://github.com/cmoss703/fanPagR" title="Go to the github repo of this site"
+                target="_blank">Click here to visit the Github Repo</a>
+
         </footer>
 
     </div>

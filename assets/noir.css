@@ -1,13 +1,16 @@
 /* Noir Theme */
 
+body  {
+    background-color:#e0e0e0;
+    background-image: url("../images/noirBG.png");
+}
+
+nav {
+    background-color: #212121;
+}
 
 header  {
     background-color: #212121;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-h4, h5 {
     color: white;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -19,17 +22,17 @@ aside
     color: black;
 }
 
-nav {
-    background-color: #212121;
-}
-
-body  {
-    background-color:#e0e0e0;
-    background-image: url("../images/noirBG.png");
+h4, h5 {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .card {
     background-color: #212121;
+}
+
+.hint {
+    color: white;
 }
 
 #fanpagr-text {
@@ -39,10 +42,6 @@ body  {
 #add-media {
     background-color: #ffffff;
     color: black;
-    }
-
-.hint {
-    color: white;
 }
 
 #footer {

@@ -4,50 +4,50 @@ body {
     background-attachment: fixed;
 }
 
-.actorPhoto {
-    width:  100px;
-    height: 300px;
-    object-fit: cover;
+nav {
+  padding-left: 20px;
+  font-family: 'Proza Libre', sans-serif;
 }
 
-.titleBar {
-    opacity: 0.5;
-    background-color: black;
+header  {
+  font-size: 40px;
+  text-align: center;
+  padding: 20px;
+  margin-top: 10px;
 }
 
 section,
 aside  
 {
-    box-shadow: 5px 5px 8px black;
-    padding: 20px;
-
-}
-
-header  {
-    font-size: 40px;
-    text-align: center;
-    padding: 20px;
-    margin-top: 10px;
-
-}
-
-nav {
-    padding-left: 20px;
-    font-family: 'Proza Libre', sans-serif;
-
-}
-
-#fanpagr-text {
-    font-family: 'Proza Libre', sans-serif;
+  box-shadow: 5px 5px 8px black;
+  padding: 20px;
 }
 
 body  {
     background-color:#f0f0f0;
-    
+}
+
+a:hover {
+  color: rgb(255, 255, 255);
+}
+
+a:active {
+  color: rgb(0, 247, 255);
 }
 
 div.landing-box {
     text-align: center;
+}
+
+.actorPhoto {
+  width:  100px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.titleBar {
+  opacity: 0.5;
+  background-color: black;
 }
 
 #add-media {
@@ -80,30 +80,10 @@ div.landing-box {
     padding-bottom: 2.5rem;
 }
 
-  a:hover {
-    color: rgb(255, 255, 255);
-  }
-
-  a:active {
-    color: rgb(0, 247, 255);
-  }
-
-/* Landscape phones and portrait tablets */
-@media (max-width: 768px) {
-
-    body {
-  background-image: none;
+#fanpagr-text {
+  font-family: 'Proza Libre', sans-serif;
 }
 
-}
 
-/* Portrait phones and smaller */
-@media (max-width: 480px) {
-
-    body {
-  background-image: none;
-}
-
-}
 
 

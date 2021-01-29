@@ -5,6 +5,16 @@ body  {
     background-image: url("../images/horrorBG.png");
 }
 
+nav {
+    background-color: #37474f;
+}
+
+header  {
+    background-color: #37474f ;
+    color: white;
+    font-family: 'IM Fell DW Pica SC', serif;
+}
+
 section,
 aside  
 {
@@ -16,19 +26,9 @@ h4 {
     font-family: 'IM Fell DW Pica SC', serif;
 }
 
-header  {
-    background-color: #37474f ;
-    color: white;
-    font-family: 'IM Fell DW Pica SC', serif;
-}
-
 h4, h5 {
     color: white;
     font-family: 'IM Fell DW Pica SC', serif;
-}
-
-nav {
-    background-color: #37474f;
 }
 
 .card {
