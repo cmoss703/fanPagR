@@ -1,9 +1,25 @@
 /*romance theme */
 
+body  {
+    background-color: #fce4ec;
+    background-image: url("../images/romanceBG.png");
+}
+
+nav {
+    background-color: #ad1457;
+}
+
 header  {
     background-color: #ad1457;
     color: white;
     font-family: 'Great Vibes', cursive;
+}
+
+section,
+aside
+{
+    background-color: #f8bbd0;
+    color: black;
 }
 
 h4 {
@@ -14,22 +30,6 @@ h4 {
 h5 {
     color: white;
     font-family:Georgia, 'Times New Roman', Times, serif;
-}
-
-section,
-aside
-{
-    background-color: #f8bbd0;
-    color: black;
-}
-
-nav {
-    background-color: #ad1457;
-}
-
-body  {
-    background-color: #fce4ec;
-    background-image: url("../images/romanceBG.png");
 }
 
 .card {

@@ -5,16 +5,21 @@ body  {
     background-image: url("../images/comedyBG.png");
 }
 
-section,
-aside  
-{
-    background-color: #80d8ff;
+nav {
+    background-color: #40c4ff  ;
+
 }
 
 header  {
     background-color: #40c4ff;
     color: white;
     font-family: 'Syncopate', sans-serif;    
+}
+
+section,
+aside  
+{
+    background-color: #80d8ff;
 }
 
 h4 {
@@ -28,17 +33,12 @@ h5 {
     font-size: larger;
 }
 
-nav {
-    background-color: #40c4ff  ;
-
+a {
+    color: #01579b;
 }
 
 .card {
     background-color: #40c4ff;
-}
-
-a {
-    color: #01579b;
 }
 
 #add-media {

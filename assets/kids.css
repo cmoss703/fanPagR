@@ -5,10 +5,8 @@ body  {
     background-image: url("../images/kidsBG.png");
 }
 
-section,
-aside  
-{
-    background-color: #9575cd;
+nav {
+    background-color: #ff5722  ;
 }
 
 header  {
@@ -17,13 +15,15 @@ header  {
     font-family: 'Do Hyeon', sans-serif;
 }
 
+section,
+aside  
+{
+    background-color: #9575cd;
+}
+
 h4, h5 {
     color: white;
     font-family: 'Do Hyeon', sans-serif;
-}
-
-nav {
-    background-color: #ff5722  ;
 }
 
 .card {
