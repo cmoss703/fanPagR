@@ -110,6 +110,28 @@ THEN I can save the theme and title to my local storage.
 
 ```
 
+## CONTRIBUTORS
+
+<p><a href="https://github.com/eliaswolfgang">Ian Von Fange</a></p>
+<p><a href="https://github.com/cmoss703">Christina Moss</a></p>
+<p><a href="https://github.com/liztownd">Liz Townsend</a></p>
+
+
+## SUGGESTIONS FOR FUTURE DEVELOPMENT
+
+-- Shareable pages
+
+With server-side processing, one should be able to save the generated fan page with a unique URL that could be shared with others
+
+-- CORS API or PHP/Node 
+
+Guaranteeing the API calls made do not return any errors in the console due to CORS issues (particularly with embedding YouTube videos)
+
+-- Adjustments to iOS functionality 
+
+All theme buttons working correctly on iOS
+
+
 ## BEGINNING STAGES
 
 At the beginning of this project, we created a WireFrame image of what the page might look like. See it below! We came a long way from the beginning, and we're really stoked about it. We hope you are too!
