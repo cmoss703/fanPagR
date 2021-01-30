@@ -22,12 +22,12 @@ Need to go back and reference your page again? (Of course you do!) You can saved
 
 We're mobile friendly, too! The functionality is the same, but the navigation bar incorporates a hamburger icon that when touched, will show you the same saved and theme content as the desktop page. The same easy functionality!
 
-![Mobile](assets/screenshots/landing-page-mobile-1.jpeg =100x20)
+![Mobile](assets/screenshots/landing-page-mobile-1.jpeg)
 
 It's hard to deny that this is the hottest new way to find all the content on your favorite titles. Give it a try!
 
 [![Video Image Link](assets/screenshots/video-link-image.png)](https://drive.google.com/file/d/1D5QlpQw00Nbb_byOF_6wYVYCz0M-zVIe/preview)
-git pus
+
 ## WEBSITE AND GITHUB REPO
 
 What are you waiting for? Give it a try yourself!
