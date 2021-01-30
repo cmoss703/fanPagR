@@ -173,7 +173,7 @@ $(document).ready(function () {
         var titleObject = {'title': title, 'theme': theme};
         // and check if the user has already saved the current title.
         if (localStorage.getItem(title) === null){
-            M.toast({html: "Fan paged saved!"});
+            M.toast({html: "Fan page saved!"});
             localStorage.setItem(title , JSON.stringify(titleObject));
         } else if (localStorage.getItem(title) !== null) {
             M.toast({html: "You already saved this fan page!"});
